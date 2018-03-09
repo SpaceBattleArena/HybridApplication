@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Réglages</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="bg">
+  <ion-list inset>
+    <ion-item>
+      <ion-label>Notifications</ion-label>
+      <ion-toggle value="foo" checked="true"></ion-toggle>
+    </ion-item>
+
+    <button margin-top ion-button (tap)="modifyProfileEvent()" full color="white">Modifier profil</button>
+
+    <button margin-top ion-button full color="white">Centre de connaissance</button>
+    <button ion-button full color="white">Aide & Assistance</button>
+    <button ion-button full color="white">Contactez-nous</button>
+
+    <button margin-top ion-button full color="white">Conditions d'utilisation</button>
+    <button ion-button full color="white">Politique de confidentialité</button>
+    <button ion-button full color="white">Mentions légales</button>
+    <button ion-button full color="white">Remerciements</button>
+
+    <button margin-top ion-button (tap)="presentLoading()" full color="white">Se déconnecter</button>
+  </ion-list>
+</ion-content>

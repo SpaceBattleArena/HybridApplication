@@ -1,0 +1,22 @@
+page-shop {
+  $primaryColor: "primary";
+  $secondaryColor: #757575;
+
+  .active {
+    color: $primaryColor;
+  }
+
+  .unactive {
+    color: $secondaryColor;
+  }
+
+  #logo {
+    width: 7em;
+  }
+
+  .footer {}
+
+  .footer-toolbar {
+    text-align: center;
+  }
+}

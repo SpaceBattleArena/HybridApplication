@@ -1,0 +1,51 @@
+page-login {
+  .bg {
+    background-image: url("../assets/imgs/space1.jpg");
+    background-repeat: repeat;
+    background-position: center;
+    background-size: contain;
+    overflow: hidden;
+  }
+
+  .scroll-content {
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  ion-card.card {
+    overflow: hidden;
+    box-shadow: none;
+    background: rgba(0, 0, 0, 0.3) !important;
+    border-radius: 5px;
+  }
+
+  ion-card-header.card-header {
+    color: #fff!important;
+  }
+
+  .list > .item-block:first-child {
+    border: medium none;
+  }
+
+  .item {
+    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border: medium none;
+
+    .text-input, {
+			color: #fff;
+		}
+
+		*::-webkit-input-placeholder  {
+			color: #fff!important;
+		}
+  }
+
+  #subscribeButton {
+    display: block;
+    margin: 0px auto;
+  }
+}

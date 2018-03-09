@@ -1,0 +1,65 @@
+<ion-content class="bg">
+  <div class="bgHeader" style="margin-bottom:200px">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-label style="text-align: left">
+            <ion-icon name="star">&nbsp;&nbsp;&nbsp;</ion-icon>Niveau 42</ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-label style="text-align: right">
+            <ion-icon name="logo-usd">&nbsp;</ion-icon>42</ion-label>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-label style="text-align: left">
+            <ion-icon name="person">&nbsp;&nbsp;&nbsp;</ion-icon>John Doe</ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-label style="text-align: center">
+            <ion-icon name="trophy">&nbsp;</ion-icon>5</ion-label>
+        </ion-col>
+        <ion-col>
+          <button ion-button icon-only clear (click)="parametersEvent()" id="settings" style="text-align: right"><ion-icon name="settings"></ion-icon></button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <div class="news-card">
+    <ion-card responsive-sm wrap *ngFor="let item of topics?.topic">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <img src="data/img/{{item.picture}}.jpg">
+            <ion-card-content (click)="topicEvent()">
+              <ion-card-title>{{ item.title }}</ion-card-title>
+              <p>{{ item.main }}</p>
+            </ion-card-content>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <button ion-button icon-only clear (click)="shopEvent()"><ion-icon name="cart" class="unactive"></ion-icon></button>
+        </ion-col>
+        <ion-col>
+          <button ion-button icon-only clear (click)="forgeEvent()"><ion-icon name="hammer" class="unactive"></ion-icon></button>
+        </ion-col>
+        <ion-col>
+          <button ion-button icon-only clear (click)="homeEvent()"><ion-icon name="home" class="active"></ion-icon></button>
+        </ion-col>
+        <ion-col>
+          <button ion-button icon-only clear (click)="rankingEvent()"><ion-icon name="podium" class="unactive"></ion-icon></button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-footer>
