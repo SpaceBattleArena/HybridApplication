@@ -1,31 +1,68 @@
 import { Injectable } from '@angular/core';
-import {Observable} from 'rxjs/Observable';
+import { Http, URLSearchParams } from "@angular/http";
+import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
 export class User {
+  id: number;
   name: string;
   email: string;
+  token: string;
 
-  constructor(name: string, email: string) {
+  constructor(id: number, name: string, email: string, token: string) {
+    this.id = id;
     this.name = name;
     this.email = email;
+    this.token = token;
   }
 }
 
 @Injectable()
 export class AuthProvider {
   currentUser: User;
+  private apiUrl = 'http://localhost:3000/';
+
+  constructor(private http: Http) {}
 
   public login(credentials) {
     if (credentials.email === null || credentials.password === null) {
       return Observable.throw("Please insert credentials");
     } else {
       return Observable.create(observer => {
-        // TODO : Request to backend
-        let access = (credentials.password === "pass" && credentials.email === "jdoe@gmail.com");
-        this.currentUser = new User('JohnDoe', 'john@doe.com');
-        observer.next(access);
-        observer.complete();
+        let access = false;
+        let datas = new URLSearchParams();
+        datas.append("email", credentials.email);
+        datas.append("password", credentials.password);
+        this.http.post(this.apiUrl + 'signin', datas)
+          .toPromise()
+          .then(
+            res => {
+              let results = res.json();
+              if (results['results'] != undefined && results['results'] != null) {
+                results = results['results'];
+                if (results != null) {
+                  access = (results['token'] != undefined &&
+                            results['token'] != null &&
+                            results['user'] != undefined &&
+                            results['user'] != null);
+                  if (access) {
+                    this.currentUser = new User(results['user']['Id'],
+                                                results['user']['Name'],
+                                                results['user']['Email'],
+                                                results['token']);
+                    localStorage.setItem('currentUser', JSON.stringify(this.currentUser));
+                  }
+                }
+              }
+              observer.next(access);
+              observer.complete();
+            },
+            error => {
+              console.log(error);
+              observer.next(false);
+              observer.complete();
+            }
+          )
       });
     }
   }

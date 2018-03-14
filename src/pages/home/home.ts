@@ -9,9 +9,11 @@ import { RankingPage } from '../ranking/ranking';
 
 // Providers
 import { HomeProvider } from '../../providers/home/home';
+import { UserProvider } from '../../providers/user/user';
 
 // data
 import { Topic } from '../../data/topic';
+import { User } from '../../data/user';
 
 @Component({
   selector: 'page-home',
@@ -23,6 +25,7 @@ export class HomePage {
   }
 
   public topics: Topic[];
+  public currentUser: User;
 
   constructor(
     private HomeProvider: HomeProvider,
@@ -62,6 +65,7 @@ export class HomePage {
 
   // When the page is loaded, the data are updated
   ngOnInit(): void {
+    this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
     this.HomeProvider.getTopic()
       .then(
       topics => {

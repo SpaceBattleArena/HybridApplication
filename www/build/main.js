@@ -1,14 +1,14 @@
 webpackJsonp([4],{
 
-/***/ 133:
+/***/ 135:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ParametersPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__modify_profile_modify_profile__ = __webpack_require__(134);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__login_login__ = __webpack_require__(80);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__modify_profile_modify_profile__ = __webpack_require__(136);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__login_login__ = __webpack_require__(81);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -51,7 +51,7 @@ var ParametersPage = (function () {
 }());
 ParametersPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-parameters',template:/*ion-inline-start:"D:\work\Epitech\EIP\App smartphone\sbaApp\src\pages\parameters\parameters.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Réglages</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="bg">\n  <ion-list inset>\n    <ion-item>\n      <ion-label>Notifications</ion-label>\n      <ion-toggle value="foo" checked="true"></ion-toggle>\n    </ion-item>\n\n    <button margin-top ion-button (tap)="modifyProfileEvent()" full color="white">Modifier profil</button>\n\n    <button margin-top ion-button full color="white">Centre de connaissance</button>\n    <button ion-button full color="white">Aide & Assistance</button>\n    <button ion-button full color="white">Contactez-nous</button>\n\n    <button margin-top ion-button full color="white">Conditions d\'utilisation</button>\n    <button ion-button full color="white">Politique de confidentialité</button>\n    <button ion-button full color="white">Mentions légales</button>\n    <button ion-button full color="white">Remerciements</button>\n\n    <button margin-top ion-button (tap)="presentLoading()" full color="white">Se déconnecter</button>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"D:\work\Epitech\EIP\App smartphone\sbaApp\src\pages\parameters\parameters.html"*/,
+        selector: 'page-parameters',template:/*ion-inline-start:"/mnt/d/EspaceDeTravail/Epitech/SBA_git/HybridApplication/src/pages/parameters/parameters.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Réglages</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="bg">\n  <ion-list inset>\n    <ion-item>\n      <ion-label>Notifications</ion-label>\n      <ion-toggle value="foo" checked="true"></ion-toggle>\n    </ion-item>\n\n    <button margin-top ion-button (tap)="modifyProfileEvent()" full color="white">Modifier profil</button>\n\n    <button margin-top ion-button full color="white">Centre de connaissance</button>\n    <button ion-button full color="white">Aide & Assistance</button>\n    <button ion-button full color="white">Contactez-nous</button>\n\n    <button margin-top ion-button full color="white">Conditions d\'utilisation</button>\n    <button ion-button full color="white">Politique de confidentialité</button>\n    <button ion-button full color="white">Mentions légales</button>\n    <button ion-button full color="white">Remerciements</button>\n\n    <button margin-top ion-button (tap)="presentLoading()" full color="white">Se déconnecter</button>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/mnt/d/EspaceDeTravail/Epitech/SBA_git/HybridApplication/src/pages/parameters/parameters.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */]])
 ], ParametersPage);
@@ -60,7 +60,7 @@ ParametersPage = __decorate([
 
 /***/ }),
 
-/***/ 134:
+/***/ 136:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -145,7 +145,7 @@ var ModifyProfilePage = (function () {
 }());
 ModifyProfilePage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-modify-profile',template:/*ion-inline-start:"D:\work\Epitech\EIP\App smartphone\sbaApp\src\pages\modify-profile\modify-profile.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Modifier Profil</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding class="bg">\n<ion-list>\n  <ion-item>\n    <ion-label (tap)="showPromptUsername()">Jdoe</ion-label>\n  </ion-item>\n  <ion-item margin-top>\n    <ion-label (tap)="showPromptEmail()">jdoe@gmail.com</ion-label>\n  </ion-item>\n</ion-list>\n</ion-content>\n'/*ion-inline-end:"D:\work\Epitech\EIP\App smartphone\sbaApp\src\pages\modify-profile\modify-profile.html"*/,
+        selector: 'page-modify-profile',template:/*ion-inline-start:"/mnt/d/EspaceDeTravail/Epitech/SBA_git/HybridApplication/src/pages/modify-profile/modify-profile.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Modifier Profil</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding class="bg">\n<ion-list>\n  <ion-item>\n    <ion-label (tap)="showPromptUsername()">Jdoe</ion-label>\n  </ion-item>\n  <ion-item margin-top>\n    <ion-label (tap)="showPromptEmail()">jdoe@gmail.com</ion-label>\n  </ion-item>\n</ion-list>\n</ion-content>\n'/*ion-inline-end:"/mnt/d/EspaceDeTravail/Epitech/SBA_git/HybridApplication/src/pages/modify-profile/modify-profile.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]])
 ], ModifyProfilePage);
@@ -154,7 +154,7 @@ ModifyProfilePage = __decorate([
 
 /***/ }),
 
-/***/ 135:
+/***/ 137:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -190,7 +190,7 @@ var SubscribePage = (function () {
 }());
 SubscribePage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-subscribe',template:/*ion-inline-start:"D:\work\Epitech\EIP\App smartphone\sbaApp\src\pages\subscribe\subscribe.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Inscription</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="bg">\n  <ion-card>\n    <ion-card-header>\n      Space Battle Arena\n    </ion-card-header>\n    <ion-card-content>\n      <ion-list>\n        <ion-item>\n          <ion-input type="text" placeholder="Email" name="email" required></ion-input>\n        </ion-item>\n        <ion-item>\n          <ion-input type="text" placeholder="Nom d\'utilisateur" name="username" required></ion-input>\n        </ion-item>\n        <ion-item>\n          <ion-input type="password" placeholder="Mot de passe" name="password" required></ion-input>\n        </ion-item>\n        <button ion-button block outline color="light" type="submit">Inscription</button>\n      </ion-list>\n    </ion-card-content>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"D:\work\Epitech\EIP\App smartphone\sbaApp\src\pages\subscribe\subscribe.html"*/,
+        selector: 'page-subscribe',template:/*ion-inline-start:"/mnt/d/EspaceDeTravail/Epitech/SBA_git/HybridApplication/src/pages/subscribe/subscribe.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Inscription</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="bg">\n  <ion-card>\n    <ion-card-header>\n      Space Battle Arena\n    </ion-card-header>\n    <ion-card-content>\n      <ion-list>\n        <ion-item>\n          <ion-input type="text" placeholder="Email" name="email" required></ion-input>\n        </ion-item>\n        <ion-item>\n          <ion-input type="text" placeholder="Nom d\'utilisateur" name="username" required></ion-input>\n        </ion-item>\n        <ion-item>\n          <ion-input type="password" placeholder="Mot de passe" name="password" required></ion-input>\n        </ion-item>\n        <button ion-button block outline color="light" type="submit">Inscription</button>\n      </ion-list>\n    </ion-card-content>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"/mnt/d/EspaceDeTravail/Epitech/SBA_git/HybridApplication/src/pages/subscribe/subscribe.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
 ], SubscribePage);
@@ -199,7 +199,7 @@ SubscribePage = __decorate([
 
 /***/ }),
 
-/***/ 146:
+/***/ 148:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -212,20 +212,20 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 146;
+webpackEmptyAsyncContext.id = 148;
 
 /***/ }),
 
-/***/ 189:
+/***/ 191:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
 	"../pages/login/login.module": [
-		578,
+		579,
 		3
 	],
 	"../pages/modify-profile/modify-profile.module": [
-		579,
+		580,
 		2
 	],
 	"../pages/parameters/parameters.module": [
@@ -233,7 +233,7 @@ var map = {
 		1
 	],
 	"../pages/subscribe/subscribe.module": [
-		580,
+		582,
 		0
 	]
 };
@@ -248,21 +248,21 @@ function webpackAsyncContext(req) {
 webpackAsyncContext.keys = function webpackAsyncContextKeys() {
 	return Object.keys(map);
 };
-webpackAsyncContext.id = 189;
+webpackAsyncContext.id = 191;
 module.exports = webpackAsyncContext;
 
 /***/ }),
 
-/***/ 190:
+/***/ 192:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomeProvider; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(191);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(287);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(289);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise__ = __webpack_require__(213);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise__ = __webpack_require__(215);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -301,49 +301,81 @@ HomeProvider = __decorate([
 
 /***/ }),
 
-/***/ 218:
+/***/ 220:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* unused harmony export User */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthProvider; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(205);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
 
 
 
 var User = (function () {
-    function User(name, email) {
+    function User(id, name, email, token) {
+        this.id = id;
         this.name = name;
         this.email = email;
+        this.token = token;
     }
     return User;
 }());
 
 var AuthProvider = (function () {
-    function AuthProvider() {
+    function AuthProvider(http) {
+        this.http = http;
+        this.apiUrl = 'http://localhost:3000/';
     }
     AuthProvider.prototype.login = function (credentials) {
         var _this = this;
         if (credentials.email === null || credentials.password === null) {
-            return __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"].throw("Please insert credentials");
+            return __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"].throw("Please insert credentials");
         }
         else {
-            return __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"].create(function (observer) {
-                // TODO : Request to backend
-                var access = (credentials.password === "pass" && credentials.email === "jdoe@gmail.com");
-                _this.currentUser = new User('JohnDoe', 'john@doe.com');
-                observer.next(access);
-                observer.complete();
+            return __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"].create(function (observer) {
+                var access = false;
+                var datas = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["e" /* URLSearchParams */]();
+                datas.append("email", credentials.email);
+                datas.append("password", credentials.password);
+                _this.http.post(_this.apiUrl + 'signin', datas)
+                    .toPromise()
+                    .then(function (res) {
+                    var results = res.json();
+                    if (results['results'] != undefined && results['results'] != null) {
+                        results = results['results'];
+                        if (results != null) {
+                            access = (results['token'] != undefined &&
+                                results['token'] != null &&
+                                results['user'] != undefined &&
+                                results['user'] != null);
+                            if (access) {
+                                _this.currentUser = new User(results['user']['Id'], results['user']['Name'], results['user']['Email'], results['token']);
+                                localStorage.setItem('currentUser', JSON.stringify(_this.currentUser));
+                            }
+                        }
+                    }
+                    observer.next(access);
+                    observer.complete();
+                }, function (error) {
+                    console.log(error);
+                    observer.next(false);
+                    observer.complete();
+                });
             });
         }
     };
@@ -352,7 +384,7 @@ var AuthProvider = (function () {
     };
     AuthProvider.prototype.logout = function () {
         var _this = this;
-        return __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"].create(function (observer) {
+        return __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"].create(function (observer) {
             _this.currentUser = null;
             observer.next(true);
             observer.complete();
@@ -361,20 +393,22 @@ var AuthProvider = (function () {
     return AuthProvider;
 }());
 AuthProvider = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])()
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object])
 ], AuthProvider);
 
+var _a;
 //# sourceMappingURL=auth.js.map
 
 /***/ }),
 
-/***/ 262:
+/***/ 264:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(263);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(267);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(265);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(269);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -382,7 +416,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 267:
+/***/ 269:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -390,26 +424,29 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(191);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_splash_screen__ = __webpack_require__(258);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_status_bar__ = __webpack_require__(261);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(577);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_home_home__ = __webpack_require__(51);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_login_login__ = __webpack_require__(80);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_subscribe_subscribe__ = __webpack_require__(135);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_parameters_parameters__ = __webpack_require__(133);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_shop_shop__ = __webpack_require__(68);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_forge_forge__ = __webpack_require__(70);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_ranking_ranking__ = __webpack_require__(69);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_modify_profile_modify_profile__ = __webpack_require__(134);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__providers_auth_auth__ = __webpack_require__(218);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__providers_home_home__ = __webpack_require__(190);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common_http__ = __webpack_require__(574);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_splash_screen__ = __webpack_require__(260);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_status_bar__ = __webpack_require__(263);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_component__ = __webpack_require__(578);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_home_home__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_login_login__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_subscribe_subscribe__ = __webpack_require__(137);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_parameters_parameters__ = __webpack_require__(135);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_shop_shop__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_forge_forge__ = __webpack_require__(71);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_ranking_ranking__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_modify_profile_modify_profile__ = __webpack_require__(136);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__providers_auth_auth__ = __webpack_require__(220);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__providers_user_user__ = __webpack_require__(583);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__providers_home_home__ = __webpack_require__(192);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -429,6 +466,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 // Providers
 
 
+
 var AppModule = (function () {
     function AppModule() {
     }
@@ -437,49 +475,51 @@ var AppModule = (function () {
 AppModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["L" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */],
-            __WEBPACK_IMPORTED_MODULE_8__pages_login_login__["a" /* LoginPage */],
-            __WEBPACK_IMPORTED_MODULE_7__pages_home_home__["a" /* HomePage */],
-            __WEBPACK_IMPORTED_MODULE_9__pages_subscribe_subscribe__["a" /* SubscribePage */],
-            __WEBPACK_IMPORTED_MODULE_10__pages_parameters_parameters__["a" /* ParametersPage */],
-            __WEBPACK_IMPORTED_MODULE_11__pages_shop_shop__["a" /* ShopPage */],
-            __WEBPACK_IMPORTED_MODULE_12__pages_forge_forge__["a" /* ForgePage */],
-            __WEBPACK_IMPORTED_MODULE_13__pages_ranking_ranking__["a" /* RankingPage */],
-            __WEBPACK_IMPORTED_MODULE_14__pages_modify_profile_modify_profile__["a" /* ModifyProfilePage */]
+            __WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* MyApp */],
+            __WEBPACK_IMPORTED_MODULE_9__pages_login_login__["a" /* LoginPage */],
+            __WEBPACK_IMPORTED_MODULE_8__pages_home_home__["a" /* HomePage */],
+            __WEBPACK_IMPORTED_MODULE_10__pages_subscribe_subscribe__["a" /* SubscribePage */],
+            __WEBPACK_IMPORTED_MODULE_11__pages_parameters_parameters__["a" /* ParametersPage */],
+            __WEBPACK_IMPORTED_MODULE_12__pages_shop_shop__["a" /* ShopPage */],
+            __WEBPACK_IMPORTED_MODULE_13__pages_forge_forge__["a" /* ForgePage */],
+            __WEBPACK_IMPORTED_MODULE_14__pages_ranking_ranking__["a" /* RankingPage */],
+            __WEBPACK_IMPORTED_MODULE_15__pages_modify_profile_modify_profile__["a" /* ModifyProfilePage */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
             __WEBPACK_IMPORTED_MODULE_3__angular_http__["c" /* HttpModule */],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */], {
+            __WEBPACK_IMPORTED_MODULE_4__angular_common_http__["a" /* HttpClientModule */],
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* MyApp */], {
                 scrollAssist: false,
                 autoFocusAssist: false
             }, {
                 links: [
                     { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/modify-profile/modify-profile.module#ModifyProfilePageModule', name: 'ModifyProfilePage', segment: 'modify-profile', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/subscribe/subscribe.module#SubscribePageModule', name: 'SubscribePage', segment: 'subscribe', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/parameters/parameters.module#ParametersPageModule', name: 'ParametersPage', segment: 'parameters', priority: 'low', defaultHistory: [] }
+                    { loadChildren: '../pages/parameters/parameters.module#ParametersPageModule', name: 'ParametersPage', segment: 'parameters', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/subscribe/subscribe.module#SubscribePageModule', name: 'SubscribePage', segment: 'subscribe', priority: 'low', defaultHistory: [] }
                 ]
             })
         ],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicApp */]],
         entryComponents: [
-            __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */],
-            __WEBPACK_IMPORTED_MODULE_8__pages_login_login__["a" /* LoginPage */],
-            __WEBPACK_IMPORTED_MODULE_7__pages_home_home__["a" /* HomePage */],
-            __WEBPACK_IMPORTED_MODULE_9__pages_subscribe_subscribe__["a" /* SubscribePage */],
-            __WEBPACK_IMPORTED_MODULE_10__pages_parameters_parameters__["a" /* ParametersPage */],
-            __WEBPACK_IMPORTED_MODULE_11__pages_shop_shop__["a" /* ShopPage */],
-            __WEBPACK_IMPORTED_MODULE_12__pages_forge_forge__["a" /* ForgePage */],
-            __WEBPACK_IMPORTED_MODULE_13__pages_ranking_ranking__["a" /* RankingPage */],
-            __WEBPACK_IMPORTED_MODULE_14__pages_modify_profile_modify_profile__["a" /* ModifyProfilePage */]
+            __WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* MyApp */],
+            __WEBPACK_IMPORTED_MODULE_9__pages_login_login__["a" /* LoginPage */],
+            __WEBPACK_IMPORTED_MODULE_8__pages_home_home__["a" /* HomePage */],
+            __WEBPACK_IMPORTED_MODULE_10__pages_subscribe_subscribe__["a" /* SubscribePage */],
+            __WEBPACK_IMPORTED_MODULE_11__pages_parameters_parameters__["a" /* ParametersPage */],
+            __WEBPACK_IMPORTED_MODULE_12__pages_shop_shop__["a" /* ShopPage */],
+            __WEBPACK_IMPORTED_MODULE_13__pages_forge_forge__["a" /* ForgePage */],
+            __WEBPACK_IMPORTED_MODULE_14__pages_ranking_ranking__["a" /* RankingPage */],
+            __WEBPACK_IMPORTED_MODULE_15__pages_modify_profile_modify_profile__["a" /* ModifyProfilePage */]
         ],
         providers: [
-            __WEBPACK_IMPORTED_MODULE_5__ionic_native_status_bar__["a" /* StatusBar */],
-            __WEBPACK_IMPORTED_MODULE_4__ionic_native_splash_screen__["a" /* SplashScreen */],
+            __WEBPACK_IMPORTED_MODULE_6__ionic_native_status_bar__["a" /* StatusBar */],
+            __WEBPACK_IMPORTED_MODULE_5__ionic_native_splash_screen__["a" /* SplashScreen */],
             { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["v" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicErrorHandler */] },
-            __WEBPACK_IMPORTED_MODULE_15__providers_auth_auth__["a" /* AuthProvider */],
-            __WEBPACK_IMPORTED_MODULE_16__providers_home_home__["a" /* HomeProvider */]
+            __WEBPACK_IMPORTED_MODULE_16__providers_auth_auth__["a" /* AuthProvider */],
+            __WEBPACK_IMPORTED_MODULE_17__providers_user_user__["a" /* UserProvider */],
+            __WEBPACK_IMPORTED_MODULE_18__providers_home_home__["a" /* HomeProvider */]
         ]
     })
 ], AppModule);
@@ -488,18 +528,18 @@ AppModule = __decorate([
 
 /***/ }),
 
-/***/ 51:
+/***/ 53:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__parameters_parameters__ = __webpack_require__(133);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shop_shop__ = __webpack_require__(68);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__forge_forge__ = __webpack_require__(70);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ranking_ranking__ = __webpack_require__(69);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_home_home__ = __webpack_require__(190);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__parameters_parameters__ = __webpack_require__(135);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shop_shop__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__forge_forge__ = __webpack_require__(71);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ranking_ranking__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_home_home__ = __webpack_require__(192);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -554,6 +594,7 @@ var HomePage = (function () {
     // When the page is loaded, the data are updated
     HomePage.prototype.ngOnInit = function () {
         var _this = this;
+        this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
         this.HomeProvider.getTopic()
             .then(function (topics) {
             _this.topics = topics;
@@ -563,27 +604,26 @@ var HomePage = (function () {
 }());
 HomePage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"D:\work\Epitech\EIP\App smartphone\sbaApp\src\pages\home\home.html"*/'<ion-content class="bg">\n  <div class="bgHeader" style="margin-bottom:200px">\n    <ion-grid>\n      <ion-row>\n        <ion-col>\n          <ion-label style="text-align: left">\n            <ion-icon name="star">&nbsp;&nbsp;&nbsp;</ion-icon>Niveau 42</ion-label>\n        </ion-col>\n        <ion-col>\n          <ion-label style="text-align: right">\n            <ion-icon name="logo-usd">&nbsp;</ion-icon>42</ion-label>\n        </ion-col>\n      </ion-row>\n      <ion-row>\n        <ion-col>\n          <ion-label style="text-align: left">\n            <ion-icon name="person">&nbsp;&nbsp;&nbsp;</ion-icon>John Doe</ion-label>\n        </ion-col>\n        <ion-col>\n          <ion-label style="text-align: center">\n            <ion-icon name="trophy">&nbsp;</ion-icon>5</ion-label>\n        </ion-col>\n        <ion-col>\n          <button ion-button icon-only clear (click)="parametersEvent()" id="settings" style="text-align: right"><ion-icon name="settings"></ion-icon></button>\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n  </div>\n  <div class="news-card">\n    <ion-card responsive-sm wrap *ngFor="let item of topics?.topic">\n      <ion-grid>\n        <ion-row>\n          <ion-col>\n            <img src="data/img/{{item.picture}}.jpg">\n            <ion-card-content (click)="topicEvent()">\n              <ion-card-title>{{ item.title }}</ion-card-title>\n              <p>{{ item.main }}</p>\n            </ion-card-content>\n          </ion-col>\n        </ion-row>\n      </ion-grid>\n    </ion-card>\n  </div>\n</ion-content>\n\n<ion-footer>\n  <ion-toolbar>\n    <ion-grid>\n      <ion-row>\n        <ion-col>\n          <button ion-button icon-only clear (click)="shopEvent()"><ion-icon name="cart" class="unactive"></ion-icon></button>\n        </ion-col>\n        <ion-col>\n          <button ion-button icon-only clear (click)="forgeEvent()"><ion-icon name="hammer" class="unactive"></ion-icon></button>\n        </ion-col>\n        <ion-col>\n          <button ion-button icon-only clear (click)="homeEvent()"><ion-icon name="home" class="active"></ion-icon></button>\n        </ion-col>\n        <ion-col>\n          <button ion-button icon-only clear (click)="rankingEvent()"><ion-icon name="podium" class="unactive"></ion-icon></button>\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n  </ion-toolbar>\n</ion-footer>\n'/*ion-inline-end:"D:\work\Epitech\EIP\App smartphone\sbaApp\src\pages\home\home.html"*/
+        selector: 'page-home',template:/*ion-inline-start:"/mnt/d/EspaceDeTravail/Epitech/SBA_git/HybridApplication/src/pages/home/home.html"*/'<ion-content class="bg">\n    <div class="bgHeader" style="margin-bottom:200px">\n        <ion-grid>\n            <ion-row>\n                <ion-col>\n                    <ion-label style="text-align: left">\n                        <ion-icon name="star">&nbsp;&nbsp;&nbsp;</ion-icon>Niveau 42</ion-label>\n                </ion-col>\n                <ion-col>\n                    <ion-label style="text-align: right">\n                        <ion-icon name="logo-usd">&nbsp;</ion-icon>42</ion-label>\n                </ion-col>\n            </ion-row>\n            <ion-row>\n                <ion-col>\n                    <ion-label style="text-align: left">\n                        <ion-icon name="person">&nbsp;&nbsp;&nbsp;</ion-icon>{{ currentUser.name }}</ion-label>\n                </ion-col>\n                <ion-col>\n                    <ion-label style="text-align: center">\n                        <ion-icon name="trophy">&nbsp;</ion-icon>5</ion-label>\n                </ion-col>\n                <ion-col>\n                    <button ion-button icon-only clear (click)="parametersEvent()" id="settings" style="text-align: right"><ion-icon name="settings"></ion-icon></button>\n                </ion-col>\n            </ion-row>\n        </ion-grid>\n    </div>\n    <div class="news-card">\n        <ion-card responsive-sm wrap *ngFor="let item of topics?.topic">\n            <ion-grid>\n                <ion-row>\n                    <ion-col>\n                        <img src="data/img/{{item.picture}}.jpg">\n                        <ion-card-content (click)="topicEvent()">\n                            <ion-card-title>{{ item.title }}</ion-card-title>\n                            <p>{{ item.main }}</p>\n                        </ion-card-content>\n                    </ion-col>\n                </ion-row>\n            </ion-grid>\n        </ion-card>\n    </div>\n</ion-content>\n\n<ion-footer>\n    <ion-toolbar>\n        <ion-grid>\n            <ion-row>\n                <ion-col>\n                    <button ion-button icon-only clear (click)="shopEvent()"><ion-icon name="cart" class="unactive"></ion-icon></button>\n                </ion-col>\n                <ion-col>\n                    <button ion-button icon-only clear (click)="forgeEvent()"><ion-icon name="hammer" class="unactive"></ion-icon></button>\n                </ion-col>\n                <ion-col>\n                    <button ion-button icon-only clear (click)="homeEvent()"><ion-icon name="home" class="active"></ion-icon></button>\n                </ion-col>\n                <ion-col>\n                    <button ion-button icon-only clear (click)="rankingEvent()"><ion-icon name="podium" class="unactive"></ion-icon></button>\n                </ion-col>\n            </ion-row>\n        </ion-grid>\n    </ion-toolbar>\n</ion-footer>'/*ion-inline-end:"/mnt/d/EspaceDeTravail/Epitech/SBA_git/HybridApplication/src/pages/home/home.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_6__providers_home_home__["a" /* HomeProvider */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_6__providers_home_home__["a" /* HomeProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__providers_home_home__["a" /* HomeProvider */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]) === "function" && _c || Object])
 ], HomePage);
 
+var _a, _b, _c;
 //# sourceMappingURL=home.js.map
 
 /***/ }),
 
-/***/ 577:
+/***/ 578:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(261);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(258);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_login_login__ = __webpack_require__(80);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(263);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(260);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_login_login__ = __webpack_require__(81);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -612,7 +652,7 @@ var MyApp = (function () {
     return MyApp;
 }());
 MyApp = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"D:\work\Epitech\EIP\App smartphone\sbaApp\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"D:\work\Epitech\EIP\App smartphone\sbaApp\src\app\app.html"*/
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/mnt/d/EspaceDeTravail/Epitech/SBA_git/HybridApplication/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/mnt/d/EspaceDeTravail/Epitech/SBA_git/HybridApplication/src/app/app.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
 ], MyApp);
@@ -621,16 +661,92 @@ MyApp = __decorate([
 
 /***/ }),
 
-/***/ 68:
+/***/ 583:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UserProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var UserProvider = (function () {
+    function UserProvider(http) {
+        this.http = http;
+        this.apiUrl = 'http://localhost:3000/';
+    }
+    UserProvider.prototype.getInformations = function (token) {
+        var _this = this;
+        if (token === null) {
+            return __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"].throw("An Error occured when reconnecting");
+        }
+        else {
+            return __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"].create(function (observer) {
+                var access = false;
+                var add_headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]();
+                add_headers.append('Authorization', token);
+                add_headers.append('Accept', 'application/json');
+                add_headers.append('Access-Control-Allow-Methods', 'POST, GET, DELETE, PUT');
+                add_headers.append('Access-Control-Allow-Origin', '*');
+                add_headers.append('Access-Control-Allow-Headers', "X-Requested-With, Content-Type, Origin, Authorization, Accept, Client-Security-Token, Accept-Encoding");
+                var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* RequestOptions */]({ headers: add_headers });
+                _this.http.get(_this.apiUrl + "player/getInformation", options)
+                    .toPromise()
+                    .then(function (res) {
+                    var results = res.json();
+                    if (results['results'] != null) {
+                        results = results['results'];
+                        if (results['status'] === 200) {
+                            access = true;
+                        }
+                    }
+                    observer.next(access);
+                    observer.complete();
+                }, function (error) {
+                    console.log(error);
+                    observer.next(false);
+                    observer.complete();
+                });
+            });
+        }
+    };
+    return UserProvider;
+}());
+UserProvider = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object])
+], UserProvider);
+
+var _a;
+//# sourceMappingURL=user.js.map
+
+/***/ }),
+
+/***/ 69:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ShopPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home__ = __webpack_require__(51);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ranking_ranking__ = __webpack_require__(69);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__forge_forge__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ranking_ranking__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__forge_forge__ = __webpack_require__(71);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -674,7 +790,7 @@ var ShopPage = (function () {
 }());
 ShopPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-shop',template:/*ion-inline-start:"D:\work\Epitech\EIP\App smartphone\sbaApp\src\pages\shop\shop.html"*/'<!--\n  Generated template for the ShopPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-toolbar>\n    <ion-title>shop</ion-title>\n  </ion-toolbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n\n<ion-footer class="footer">\n  <ion-toolbar class="footer-toolbar">\n    <ion-grid>\n      <ion-row>\n        <ion-col>\n          <button ion-button icon-only clear (click)="shopEvent()"><ion-icon name="cart" class="active"></ion-icon></button>\n        </ion-col>\n        <ion-col>\n          <button ion-button icon-only clear (click)="forgeEvent()"><ion-icon name="hammer" class="unactive"></ion-icon></button>\n        </ion-col>\n        <ion-col>\n          <button ion-button icon-only clear (click)="homeEvent()"><ion-icon name="home" class="unactive"></ion-icon></button>\n        </ion-col>\n        <ion-col>\n          <button ion-button icon-only clear (click)="rankingEvent()"><ion-icon name="podium" class="unactive"></ion-icon></button>\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n  </ion-toolbar>\n</ion-footer>\n'/*ion-inline-end:"D:\work\Epitech\EIP\App smartphone\sbaApp\src\pages\shop\shop.html"*/,
+        selector: 'page-shop',template:/*ion-inline-start:"/mnt/d/EspaceDeTravail/Epitech/SBA_git/HybridApplication/src/pages/shop/shop.html"*/'<!--\n  Generated template for the ShopPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-toolbar>\n    <ion-title>shop</ion-title>\n  </ion-toolbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n\n<ion-footer class="footer">\n  <ion-toolbar class="footer-toolbar">\n    <ion-grid>\n      <ion-row>\n        <ion-col>\n          <button ion-button icon-only clear (click)="shopEvent()"><ion-icon name="cart" class="active"></ion-icon></button>\n        </ion-col>\n        <ion-col>\n          <button ion-button icon-only clear (click)="forgeEvent()"><ion-icon name="hammer" class="unactive"></ion-icon></button>\n        </ion-col>\n        <ion-col>\n          <button ion-button icon-only clear (click)="homeEvent()"><ion-icon name="home" class="unactive"></ion-icon></button>\n        </ion-col>\n        <ion-col>\n          <button ion-button icon-only clear (click)="rankingEvent()"><ion-icon name="podium" class="unactive"></ion-icon></button>\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n  </ion-toolbar>\n</ion-footer>\n'/*ion-inline-end:"/mnt/d/EspaceDeTravail/Epitech/SBA_git/HybridApplication/src/pages/shop/shop.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
 ], ShopPage);
@@ -683,16 +799,16 @@ ShopPage = __decorate([
 
 /***/ }),
 
-/***/ 69:
+/***/ 70:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RankingPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home__ = __webpack_require__(51);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shop_shop__ = __webpack_require__(68);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__forge_forge__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shop_shop__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__forge_forge__ = __webpack_require__(71);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -736,7 +852,7 @@ var RankingPage = (function () {
 }());
 RankingPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-ranking',template:/*ion-inline-start:"D:\work\Epitech\EIP\App smartphone\sbaApp\src\pages\ranking\ranking.html"*/'<!--\n  Generated template for the RankingPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-toolbar>\n    <ion-title>ranking</ion-title>\n  </ion-toolbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n\n<ion-footer class="footer">\n  <ion-toolbar class="footer-toolbar">\n    <ion-grid>\n      <ion-row>\n        <ion-col>\n          <button ion-button icon-only clear (click)="shopEvent()"><ion-icon name="cart" class="unactive"></ion-icon></button>\n        </ion-col>\n        <ion-col>\n          <button ion-button icon-only clear (click)="forgeEvent()"><ion-icon name="hammer" class="unactive"></ion-icon></button>\n        </ion-col>\n        <ion-col>\n          <button ion-button icon-only clear (click)="homeEvent()"><ion-icon name="home" class="unactive"></ion-icon></button>\n        </ion-col>\n        <ion-col>\n          <button ion-button icon-only clear (click)="rankingEvent()"><ion-icon name="podium" class="active"></ion-icon></button>\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n  </ion-toolbar>\n</ion-footer>\n'/*ion-inline-end:"D:\work\Epitech\EIP\App smartphone\sbaApp\src\pages\ranking\ranking.html"*/,
+        selector: 'page-ranking',template:/*ion-inline-start:"/mnt/d/EspaceDeTravail/Epitech/SBA_git/HybridApplication/src/pages/ranking/ranking.html"*/'<!--\n  Generated template for the RankingPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-toolbar>\n    <ion-title>ranking</ion-title>\n  </ion-toolbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n\n<ion-footer class="footer">\n  <ion-toolbar class="footer-toolbar">\n    <ion-grid>\n      <ion-row>\n        <ion-col>\n          <button ion-button icon-only clear (click)="shopEvent()"><ion-icon name="cart" class="unactive"></ion-icon></button>\n        </ion-col>\n        <ion-col>\n          <button ion-button icon-only clear (click)="forgeEvent()"><ion-icon name="hammer" class="unactive"></ion-icon></button>\n        </ion-col>\n        <ion-col>\n          <button ion-button icon-only clear (click)="homeEvent()"><ion-icon name="home" class="unactive"></ion-icon></button>\n        </ion-col>\n        <ion-col>\n          <button ion-button icon-only clear (click)="rankingEvent()"><ion-icon name="podium" class="active"></ion-icon></button>\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n  </ion-toolbar>\n</ion-footer>\n'/*ion-inline-end:"/mnt/d/EspaceDeTravail/Epitech/SBA_git/HybridApplication/src/pages/ranking/ranking.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
 ], RankingPage);
@@ -745,16 +861,16 @@ RankingPage = __decorate([
 
 /***/ }),
 
-/***/ 70:
+/***/ 71:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ForgePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home__ = __webpack_require__(51);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shop_shop__ = __webpack_require__(68);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ranking_ranking__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shop_shop__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ranking_ranking__ = __webpack_require__(70);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -798,7 +914,7 @@ var ForgePage = (function () {
 }());
 ForgePage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-forge',template:/*ion-inline-start:"D:\work\Epitech\EIP\App smartphone\sbaApp\src\pages\forge\forge.html"*/'<!--\n  Generated template for the ForgePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-toolbar>\n    <ion-title>forge</ion-title>\n  </ion-toolbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n\n<ion-footer class="footer">\n  <ion-toolbar class="footer-toolbar">\n    <ion-grid>\n      <ion-row>\n        <ion-col>\n          <button ion-button icon-only clear (click)="shopEvent()"><ion-icon name="cart" class="unactive"></ion-icon></button>\n        </ion-col>\n        <ion-col>\n          <button ion-button icon-only clear (click)="forgeEvent()"><ion-icon name="hammer" class="active"></ion-icon></button>\n        </ion-col>\n        <ion-col>\n          <button ion-button icon-only clear (click)="homeEvent()"><ion-icon name="home" class="unactive"></ion-icon></button>\n        </ion-col>\n        <ion-col>\n          <button ion-button icon-only clear (click)="rankingEvent()"><ion-icon name="podium" class="unactive"></ion-icon></button>\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n  </ion-toolbar>\n</ion-footer>\n'/*ion-inline-end:"D:\work\Epitech\EIP\App smartphone\sbaApp\src\pages\forge\forge.html"*/,
+        selector: 'page-forge',template:/*ion-inline-start:"/mnt/d/EspaceDeTravail/Epitech/SBA_git/HybridApplication/src/pages/forge/forge.html"*/'<!--\n  Generated template for the ForgePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-toolbar>\n    <ion-title>forge</ion-title>\n  </ion-toolbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n\n<ion-footer class="footer">\n  <ion-toolbar class="footer-toolbar">\n    <ion-grid>\n      <ion-row>\n        <ion-col>\n          <button ion-button icon-only clear (click)="shopEvent()"><ion-icon name="cart" class="unactive"></ion-icon></button>\n        </ion-col>\n        <ion-col>\n          <button ion-button icon-only clear (click)="forgeEvent()"><ion-icon name="hammer" class="active"></ion-icon></button>\n        </ion-col>\n        <ion-col>\n          <button ion-button icon-only clear (click)="homeEvent()"><ion-icon name="home" class="unactive"></ion-icon></button>\n        </ion-col>\n        <ion-col>\n          <button ion-button icon-only clear (click)="rankingEvent()"><ion-icon name="podium" class="unactive"></ion-icon></button>\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n  </ion-toolbar>\n</ion-footer>\n'/*ion-inline-end:"/mnt/d/EspaceDeTravail/Epitech/SBA_git/HybridApplication/src/pages/forge/forge.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
 ], ForgePage);
@@ -807,16 +923,17 @@ ForgePage = __decorate([
 
 /***/ }),
 
-/***/ 80:
+/***/ 81:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home__ = __webpack_require__(51);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__subscribe_subscribe__ = __webpack_require__(135);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_auth_auth__ = __webpack_require__(218);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__subscribe_subscribe__ = __webpack_require__(137);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_auth_auth__ = __webpack_require__(220);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_user_user__ = __webpack_require__(583);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -833,14 +950,38 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 // Providers
 
+
 var LoginPage = (function () {
-    function LoginPage(nav, auth, alertCtrl, loadingCtrl) {
+    function LoginPage(nav, auth, user, alertCtrl, loadingCtrl) {
         this.nav = nav;
         this.auth = auth;
+        this.user = user;
         this.alertCtrl = alertCtrl;
         this.loadingCtrl = loadingCtrl;
         this.registerCredentials = { email: '', password: '' };
     }
+    LoginPage.prototype.ngOnInit = function () {
+        this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
+        if (this.currentUser != null) {
+            this.getInformations();
+        }
+    };
+    LoginPage.prototype.getInformations = function () {
+        var _this = this;
+        //Do a provider to get informations from user id
+        this.user.getInformations(this.currentUser.token)
+            .subscribe(function (allowed) {
+            if (allowed) {
+                _this.nav.setRoot(__WEBPACK_IMPORTED_MODULE_2__home_home__["a" /* HomePage */]);
+            }
+            else {
+                _this.registerCredentials.email = _this.currentUser.email;
+            }
+        }, function (error) {
+            _this.showError("You have been disconnect. Please reconnect to access to your profile");
+        });
+        return false;
+    };
     LoginPage.prototype.login = function () {
         var _this = this;
         this.showLoading();
@@ -886,14 +1027,15 @@ var LoginPage = (function () {
 }());
 LoginPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-login',template:/*ion-inline-start:"D:\work\Epitech\EIP\App smartphone\sbaApp\src\pages\login\login.html"*/'<ion-content class="bg">\n  <ion-card>\n    <ion-card-header>\n      Space Battle Arena\n    </ion-card-header>\n    <ion-card-content>\n      <ion-list>\n        <form #registerForm="ngForm" (ngSubmit)="login(registerForm.form.value)" novalidate>\n          <ion-item>\n            <ion-input type="text" placeholder="Nom d\'utilisateur" name="username" [(ngModel)]="registerCredentials.email" required></ion-input>\n          </ion-item>\n          <ion-item>\n            <ion-input type="password" placeholder="Mot de passe" name="password" [(ngModel)]="registerCredentials.password" required></ion-input>\n          </ion-item>\n          <button ion-button block outline color="light" type="submit" [disabled]="!registerForm.form.valid">Connexion</button>\n          <button ion-button (click)="showErrorForgottenId()" clear full color="light">Mot de passe oublié ?</button>\n        </form>\n      </ion-list>\n    </ion-card-content>\n  </ion-card>\n  <button class="bottom" id="subscribeButton" (click)="registrationEvent()" ion-button clear color="light">Pas de compte ? Inscrivez-vous</button>\n</ion-content>\n'/*ion-inline-end:"D:\work\Epitech\EIP\App smartphone\sbaApp\src\pages\login\login.html"*/,
+        selector: 'page-login',template:/*ion-inline-start:"/mnt/d/EspaceDeTravail/Epitech/SBA_git/HybridApplication/src/pages/login/login.html"*/'<ion-content class="bg">\n  <ion-card>\n    <ion-card-header>\n      Space Battle Arena\n    </ion-card-header>\n    <ion-card-content>\n      <ion-list>\n        <form #registerForm="ngForm" (ngSubmit)="login(registerForm.form.value)" novalidate>\n          <ion-item>\n            <ion-input type="text" placeholder="Nom d\'utilisateur" name="username" [(ngModel)]="registerCredentials.email" required></ion-input>\n          </ion-item>\n          <ion-item>\n            <ion-input type="password" placeholder="Mot de passe" name="password" [(ngModel)]="registerCredentials.password" required></ion-input>\n          </ion-item>\n          <button ion-button block outline color="light" type="submit" [disabled]="!registerForm.form.valid">Connexion</button>\n          <button ion-button (click)="showErrorForgottenId()" clear full color="light">Mot de passe oublié ?</button>\n        </form>\n      </ion-list>\n    </ion-card-content>\n  </ion-card>\n  <button class="bottom" id="subscribeButton" (click)="registrationEvent()" ion-button clear color="light">Pas de compte ? Inscrivez-vous</button>\n</ion-content>\n'/*ion-inline-end:"/mnt/d/EspaceDeTravail/Epitech/SBA_git/HybridApplication/src/pages/login/login.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_4__providers_auth_auth__["a" /* AuthProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__providers_auth_auth__["a" /* AuthProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__providers_auth_auth__["a" /* AuthProvider */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_5__providers_user_user__["a" /* UserProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__providers_user_user__["a" /* UserProvider */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */]) === "function" && _e || Object])
 ], LoginPage);
 
+var _a, _b, _c, _d, _e;
 //# sourceMappingURL=login.js.map
 
 /***/ })
 
-},[262]);
+},[264]);
 //# sourceMappingURL=main.js.map

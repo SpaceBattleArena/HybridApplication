@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { HttpModule} from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
@@ -18,6 +19,7 @@ import { ModifyProfilePage } from '../pages/modify-profile/modify-profile';
 
 // Providers
 import { AuthProvider } from '../providers/auth/auth';
+import { UserProvider } from '../providers/user/user';
 import { HomeProvider } from '../providers/home/home';
 
 @NgModule({
@@ -35,6 +37,7 @@ import { HomeProvider } from '../providers/home/home';
   imports: [
     BrowserModule,
     HttpModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp, {
       scrollAssist: false,
       autoFocusAssist: false
@@ -57,6 +60,7 @@ import { HomeProvider } from '../providers/home/home';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthProvider,
+    UserProvider,
     HomeProvider
   ]
 })
