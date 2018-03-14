@@ -9,6 +9,7 @@ webpackJsonp([4],{
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__modify_profile_modify_profile__ = __webpack_require__(136);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__login_login__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_auth_auth__ = __webpack_require__(220);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -22,8 +23,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+// Providers
+
 var ParametersPage = (function () {
-    function ParametersPage(navCtrl, navParams, loadingCtrl) {
+    function ParametersPage(auth, navCtrl, navParams, loadingCtrl) {
+        this.auth = auth;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.loadingCtrl = loadingCtrl;
@@ -37,7 +41,13 @@ var ParametersPage = (function () {
     };
     // Event to disconnect
     ParametersPage.prototype.disconnectEvent = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__login_login__["a" /* LoginPage */]);
+        var _this = this;
+        this.auth.logout().subscribe(function (allowed) {
+            if (allowed) {
+                _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__login_login__["a" /* LoginPage */]);
+                _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__login_login__["a" /* LoginPage */]);
+            }
+        });
     };
     ParametersPage.prototype.presentLoading = function () {
         this.loadingCtrl.create({
@@ -53,9 +63,10 @@ ParametersPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
         selector: 'page-parameters',template:/*ion-inline-start:"/mnt/d/EspaceDeTravail/Epitech/SBA_git/HybridApplication/src/pages/parameters/parameters.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Réglages</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="bg">\n  <ion-list inset>\n    <ion-item>\n      <ion-label>Notifications</ion-label>\n      <ion-toggle value="foo" checked="true"></ion-toggle>\n    </ion-item>\n\n    <button margin-top ion-button (tap)="modifyProfileEvent()" full color="white">Modifier profil</button>\n\n    <button margin-top ion-button full color="white">Centre de connaissance</button>\n    <button ion-button full color="white">Aide & Assistance</button>\n    <button ion-button full color="white">Contactez-nous</button>\n\n    <button margin-top ion-button full color="white">Conditions d\'utilisation</button>\n    <button ion-button full color="white">Politique de confidentialité</button>\n    <button ion-button full color="white">Mentions légales</button>\n    <button ion-button full color="white">Remerciements</button>\n\n    <button margin-top ion-button (tap)="presentLoading()" full color="white">Se déconnecter</button>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/mnt/d/EspaceDeTravail/Epitech/SBA_git/HybridApplication/src/pages/parameters/parameters.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_4__providers_auth_auth__["a" /* AuthProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__providers_auth_auth__["a" /* AuthProvider */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */]) === "function" && _d || Object])
 ], ParametersPage);
 
+var _a, _b, _c, _d;
 //# sourceMappingURL=parameters.js.map
 
 /***/ }),
@@ -385,7 +396,9 @@ var AuthProvider = (function () {
     AuthProvider.prototype.logout = function () {
         var _this = this;
         return __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"].create(function (observer) {
-            _this.currentUser = null;
+            _this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
+            _this.currentUser.token = "";
+            localStorage.setItem('currentUser', JSON.stringify(_this.currentUser));
             observer.next(true);
             observer.complete();
         });
@@ -969,18 +982,22 @@ var LoginPage = (function () {
     LoginPage.prototype.getInformations = function () {
         var _this = this;
         //Do a provider to get informations from user id
-        this.user.getInformations(this.currentUser.token)
-            .subscribe(function (allowed) {
-            if (allowed) {
-                _this.nav.setRoot(__WEBPACK_IMPORTED_MODULE_2__home_home__["a" /* HomePage */]);
-            }
-            else {
-                _this.registerCredentials.email = _this.currentUser.email;
-            }
-        }, function (error) {
-            _this.showError("You have been disconnect. Please reconnect to access to your profile");
-        });
-        return false;
+        if (this.currentUser.token != undefined && this.currentUser.token != null && this.currentUser.token != "") {
+            this.user.getInformations(this.currentUser.token)
+                .subscribe(function (allowed) {
+                if (allowed) {
+                    _this.nav.setRoot(__WEBPACK_IMPORTED_MODULE_2__home_home__["a" /* HomePage */]);
+                }
+                else {
+                    _this.registerCredentials.email = _this.currentUser.email;
+                }
+            }, function (error) {
+                _this.showError("You have been disconnect. Please reconnect to access to your profile");
+            });
+        }
+        else {
+            this.registerCredentials.email = this.currentUser.email;
+        }
     };
     LoginPage.prototype.login = function () {
         var _this = this;

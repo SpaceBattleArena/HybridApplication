@@ -73,7 +73,9 @@ export class AuthProvider {
 
   public logout() {
     return Observable.create(observer => {
-      this.currentUser = null;
+      this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
+      this.currentUser.token = "";
+      localStorage.setItem('currentUser', JSON.stringify(this.currentUser));
       observer.next(true);
       observer.complete();
     });

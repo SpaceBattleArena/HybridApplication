@@ -4,6 +4,9 @@ import { LoadingController, IonicPage, NavController, NavParams } from 'ionic-an
 import { ModifyProfilePage } from '../modify-profile/modify-profile';
 import { LoginPage } from '../login/login';
 
+// Providers
+import { AuthProvider } from '../../providers/auth/auth';
+
 @IonicPage()
 @Component({
   selector: 'page-parameters',
@@ -11,7 +14,7 @@ import { LoginPage } from '../login/login';
 })
 export class ParametersPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl:LoadingController) {
+  constructor(public auth: AuthProvider, public navCtrl: NavController, public navParams: NavParams, public loadingCtrl:LoadingController) {
   }
 
   ionViewDidLoad() {
@@ -25,7 +28,14 @@ export class ParametersPage {
 
   // Event to disconnect
   disconnectEvent() {
-    this.navCtrl.push(LoginPage);
+    this.auth.logout().subscribe(
+      allowed => {
+        if (allowed) {
+          this.navCtrl.setRoot(LoginPage);
+          this.navCtrl.push(LoginPage);
+        }
+      }
+    );
   }
 
   presentLoading() {

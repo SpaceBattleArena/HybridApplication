@@ -31,20 +31,23 @@ export class LoginPage implements OnInit {
 
   private getInformations() {
     //Do a provider to get informations from user id
-    this.user.getInformations(this.currentUser.token)
-      .subscribe(
-        allowed => {
-          if (allowed) {
-            this.nav.setRoot(HomePage);
-          } else {
-            this.registerCredentials.email = this.currentUser.email;
+    if (this.currentUser.token != undefined && this.currentUser.token != null && this.currentUser.token != "") {
+      this.user.getInformations(this.currentUser.token)
+        .subscribe(
+          allowed => {
+            if (allowed) {
+              this.nav.setRoot(HomePage);
+            } else {
+              this.registerCredentials.email = this.currentUser.email;
+            }
+          },
+          error => {
+            this.showError("You have been disconnect. Please reconnect to access to your profile");
           }
-        },
-        error => {
-          this.showError("You have been disconnect. Please reconnect to access to your profile");
-        }
-      );
-    return false;
+        );
+    } else {
+      this.registerCredentials.email = this.currentUser.email;
+    }
   }
 
   public login() {
