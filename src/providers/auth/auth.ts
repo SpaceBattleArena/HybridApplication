@@ -71,6 +71,39 @@ export class AuthProvider {
     return this.currentUser;
   }
 
+  public register(credentials) {
+    if (credentials.email === null || credentials.password === null) {
+      return Observable.throw("Please insert credentials");
+    } else {
+      return Observable.create(observer => {
+        let access = false;
+        let datas = new URLSearchParams();
+        datas.append("email", credentials.email);
+        datas.append("password", credentials.password);
+        datas.append("first_name", credentials.username);
+        datas.append("last_name", credentials.username);
+        this.http.post(this.apiUrl + 'signup', datas)
+          .toPromise()
+          .then(
+            res => {
+              let results = res.json();
+              if (results['message'] != undefined && results['message'] === "Your account has been created successfully") {
+                access = true;
+              }
+              console.log(results);
+              observer.next(access);
+              observer.complete();
+            },
+            error => {
+              console.log(error);
+              observer.next(false);
+              observer.complete();
+            }
+          )
+      });
+    }
+  }
+
   public logout() {
     return Observable.create(observer => {
       this.currentUser = JSON.parse(localStorage.getItem('currentUser'));

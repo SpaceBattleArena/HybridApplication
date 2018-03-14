@@ -13,8 +13,9 @@
             </ion-row>
             <ion-row>
                 <ion-col>
-                    <ion-label style="text-align: left">
-                        <ion-icon name="person">&nbsp;&nbsp;&nbsp;</ion-icon>{{ currentUser.name }}</ion-label>
+                    <ion-label style="text-align: left" *ngIf="currentUser != undefined && currentUser != null && currentUser.name != undefined">
+                        <ion-icon name="person">&nbsp;&nbsp;&nbsp;</ion-icon>{{ currentUser.name }}
+                    </ion-label>
                 </ion-col>
                 <ion-col>
                     <ion-label style="text-align: center">

@@ -20,7 +20,7 @@ export class LoginPage implements OnInit {
   registerCredentials = { email: '', password: '' };
   currentUser: User;
 
-  constructor(private nav: NavController, private auth: AuthProvider, private user: UserProvider, private alertCtrl: AlertController, private loadingCtrl: LoadingController) { }
+  constructor(private nav: NavController, private auth: AuthProvider, private userProvider: UserProvider, private alertCtrl: AlertController, private loadingCtrl: LoadingController) { }
 
   ngOnInit() {
     this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
@@ -32,10 +32,11 @@ export class LoginPage implements OnInit {
   private getInformations() {
     //Do a provider to get informations from user id
     if (this.currentUser.token != undefined && this.currentUser.token != null && this.currentUser.token != "") {
-      this.user.getInformations(this.currentUser.token)
+      this.userProvider.getInformations(this.currentUser.token)
         .subscribe(
           allowed => {
             if (allowed) {
+              console.log('redirect');
               this.nav.setRoot(HomePage);
             } else {
               this.registerCredentials.email = this.currentUser.email;
@@ -51,7 +52,7 @@ export class LoginPage implements OnInit {
   }
 
   public login() {
-    this.showLoading()
+    this.showLoading();
     this.auth.login(this.registerCredentials).subscribe(allowed => {
       if (allowed) {
         this.nav.setRoot(HomePage);
