@@ -28,14 +28,14 @@
         </ion-grid>
     </div>
     <div class="news-card">
-        <ion-card responsive-sm wrap *ngFor="let item of topics?.topic">
+        <ion-card responsive-sm wrap *ngFor="let item of topics">
             <ion-grid>
                 <ion-row>
                     <ion-col>
-                        <img src="data/img/{{item.picture}}.jpg">
+                        <img src="http://localhost:3000/{{item.Slug}}">
                         <ion-card-content (click)="topicEvent()">
-                            <ion-card-title>{{ item.title }}</ion-card-title>
-                            <p>{{ item.main }}</p>
+                            <ion-card-title>{{ item.Title }}</ion-card-title>
+                            <p>{{ item.Description }}</p>
                         </ion-card-content>
                     </ion-col>
                 </ion-row>

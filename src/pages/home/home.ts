@@ -66,10 +66,11 @@ export class HomePage {
   // When the page is loaded, the data are updated
   ngOnInit(): void {
     this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
-    this.HomeProvider.getTopic()
-      .then(
+    this.HomeProvider.getAll()
+      .subscribe(
       topics => {
         this.topics = topics;
+        console.log(this.topics);
       });
   }
 }

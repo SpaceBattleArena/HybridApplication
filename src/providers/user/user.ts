@@ -29,6 +29,7 @@ export class UserProvider {
               let results = res.json();
               if (results['results'] != null) {
                 results = results['results'];
+                console.log(results);
                 if (results['status'] === 200) {
                     access = true;
                 }

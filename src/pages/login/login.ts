@@ -30,11 +30,13 @@ export class LoginPage implements OnInit {
   }
 
   private getInformations() {
-    //Do a provider to get informations from user id
+    console.log(this.currentUser);
     if (this.currentUser.token != undefined && this.currentUser.token != null && this.currentUser.token != "") {
+      console.log('ok');
       this.userProvider.getInformations(this.currentUser.token)
         .subscribe(
           allowed => {
+            console.log(allowed);
             if (allowed) {
               console.log('redirect');
               this.nav.setRoot(HomePage);

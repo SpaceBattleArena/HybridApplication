@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, AlertController, LoadingController, Loading, IonicPage } from 'ionic-angular';
+import * as EmailValidator from 'email-validator';
 
 // Pages
 import { LoginPage } from '../login/login';
@@ -24,16 +25,25 @@ export class SubscribePage {
 
   public subscribe() {
     this.showLoading();
-    this.auth.register(this.registerCredentials).subscribe(allowed => {
-      if (allowed) {
-        this.nav.setRoot(LoginPage);
+    if (EmailValidator.validate(this.registerCredentials.email)) {
+      let reg = new RegExp("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$");
+      if (reg.test(this.registerCredentials.password)) {
+        this.auth.register(this.registerCredentials).subscribe(allowed => {
+          if (allowed) {
+            this.nav.setRoot(LoginPage);
+          } else {
+            this.showError("Email address or username are already taken");
+          }
+        },
+          error => {
+            this.showError(error);
+          });
       } else {
-        this.showError("");
+        this.showError("Your password must contains minimum eight characters, at least one uppercase letter, one lowercase letter and one number");
       }
-    },
-      error => {
-        this.showError(error);
-      });
+    } else {
+      this.showError("Email address is not valid");
+    }
   }
 
   showLoading() {
