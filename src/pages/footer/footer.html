@@ -1,0 +1,40 @@
+<ion-footer>
+    <ion-toolbar>
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+                    <button ion-button icon-only clear (click)="shopEvent()">
+                      <ion-icon *ngIf="linkActive === 'shop'; else UnactiveShop" name="cart" class="active"></ion-icon>
+                      <ng-template #UnactiveShop>
+                        <ion-icon name="cart" class="unactive"></ion-icon>
+                      </ng-template>
+                    </button>
+                </ion-col>
+                <ion-col>
+                    <button ion-button icon-only clear (click)="forgeEvent()">
+                      <ion-icon *ngIf="linkActive === 'forge'; else UnactiveForge" name="hammer" class="active"></ion-icon>
+                      <ng-template #UnactiveForge>
+                        <ion-icon name="hammer" class="unactive"></ion-icon>
+                      </ng-template>
+                    </button>
+                </ion-col>
+                <ion-col>
+                    <button ion-button icon-only clear (click)="homeEvent()">
+                      <ion-icon *ngIf="linkActive === 'home'; else UnactiveHome" name="home" class="active"></ion-icon>
+                      <ng-template #UnactiveHome>
+                        <ion-icon name="home" class="unactive"></ion-icon>
+                      </ng-template>
+                    </button>
+                </ion-col>
+                <ion-col>
+                    <button ion-button icon-only clear (click)="rankingEvent()">
+                      <ion-icon *ngIf="linkActive === 'rank'; else UnactiveShop" name="podium" class="active"></ion-icon>
+                      <ng-template #UnactiveShop>
+                        <ion-icon name="podium" class="unactive"></ion-icon>
+                      </ng-template>
+                    </button>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-toolbar>
+</ion-footer>

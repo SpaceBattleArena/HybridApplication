@@ -3,9 +3,6 @@ import { NavController, NavParams } from 'ionic-angular';
 
 // Pages
 import { ParametersPage } from '../parameters/parameters';
-import { ShopPage } from '../shop/shop';
-import { ForgePage } from '../forge/forge';
-import { RankingPage } from '../ranking/ranking';
 
 // Providers
 import { HomeProvider } from '../../providers/home/home';
@@ -36,26 +33,6 @@ export class HomePage {
   // Event to access the parameters page
   parametersEvent() {
     this.navCtrl.push(ParametersPage);
-  }
-
-  // Event to access the store page
-  shopEvent() {
-    this.navCtrl.push(ShopPage);
-  }
-
-  // Event to access the forge page
-  forgeEvent() {
-    this.navCtrl.push(ForgePage);
-  }
-
-  // Event to access the home page
-  homeEvent() {
-    // this.navCtrl.push(HomePage);
-  }
-
-  // Event to access the ranking page
-  rankingEvent() {
-    this.navCtrl.push(RankingPage);
   }
 
   // Event to access the detail of the clicked topic

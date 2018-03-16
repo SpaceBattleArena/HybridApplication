@@ -9,6 +9,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 // Pages
 import { HomePage } from '../pages/home/home';
+import { FooterPage } from '../pages/footer/footer';
 import { LoginPage } from '../pages/login/login';
 import { SubscribePage } from '../pages/subscribe/subscribe';
 import { ParametersPage } from '../pages/parameters/parameters';
@@ -27,6 +28,7 @@ import { HomeProvider } from '../providers/home/home';
     MyApp,
     LoginPage,
     HomePage,
+    FooterPage,
     SubscribePage,
     ParametersPage,
     ShopPage,
@@ -48,6 +50,7 @@ import { HomeProvider } from '../providers/home/home';
     MyApp,
     LoginPage,
     HomePage,
+    FooterPage,
     SubscribePage,
     ParametersPage,
     ShopPage,
