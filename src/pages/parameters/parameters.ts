@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import { LoadingController, IonicPage, NavController, NavParams } from 'ionic-angular';
+import { App, LoadingController, IonicPage, NavController, NavParams, Tabs } from 'ionic-angular';
 
 import { ModifyProfilePage } from '../modify-profile/modify-profile';
 import { LoginPage } from '../login/login';
+import { MainPage } from '../main/main';
 
 // Providers
 import { AuthProvider } from '../../providers/auth/auth';
@@ -14,7 +15,7 @@ import { AuthProvider } from '../../providers/auth/auth';
 })
 export class ParametersPage {
 
-  constructor(public auth: AuthProvider, public navCtrl: NavController, public navParams: NavParams, public loadingCtrl:LoadingController) {
+  constructor(public appCtrl: App, public tabs: Tabs, public auth: AuthProvider, public navCtrl: NavController, public navParams: NavParams, public loadingCtrl:LoadingController) {
   }
 
   ionViewDidLoad() {
@@ -31,8 +32,7 @@ export class ParametersPage {
     this.auth.logout().subscribe(
       allowed => {
         if (allowed) {
-          this.navCtrl.setRoot(LoginPage);
-          this.navCtrl.push(LoginPage);
+          this.appCtrl.getRootNav().setRoot(LoginPage);
         }
       }
     );
@@ -45,5 +45,15 @@ export class ParametersPage {
       dismissOnPageChange: true
     }).present();
     this.disconnectEvent();
+  }
+
+  ionViewDidEnter() {
+    // the root left menu should be disabled on the tutorial page
+    this.tabs.setTabbarHidden(true);
+  }
+
+  ionViewWillLeave() {
+    // enable the root left menu when leaving the tutorial page
+    this.tabs.setTabbarHidden(false);
   }
 }

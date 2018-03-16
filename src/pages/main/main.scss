@@ -1,0 +1,24 @@
+page-main {
+    .content-md {
+        background-color: unset;
+    }
+    .tabs-md {
+        .tabbar {
+            background-color: #1c2e46;
+            height: 4rem;
+        }
+        .tab-button[aria-selected=true] {
+            background-color: #ef480e;
+            min-height: 4rem;
+            .tab-button-icon {
+                color: white;
+            }
+        }
+        .tab-button-icon {
+            color: rgba(255, 255, 255, 0.75);
+        }
+    }
+    .tabbar::before {
+        background-color: #ef480e;
+    }
+}

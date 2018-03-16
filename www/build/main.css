@@ -30538,6 +30538,32 @@ page-login #subscribeButton {
   margin: 0px auto;
 }
 
+page-main .content-md {
+  background-color: unset;
+}
+
+page-main .tabs-md .tabbar {
+  background-color: #1c2e46;
+  height: 4rem;
+}
+
+page-main .tabs-md .tab-button[aria-selected=true] {
+  background-color: #ef480e;
+  min-height: 4rem;
+}
+
+page-main .tabs-md .tab-button[aria-selected=true] .tab-button-icon {
+  color: white;
+}
+
+page-main .tabs-md .tab-button-icon {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+page-main .tabbar::before {
+  background-color: #ef480e;
+}
+
 page-modify-profile .bg {
   background: #ECEFF1;
 }

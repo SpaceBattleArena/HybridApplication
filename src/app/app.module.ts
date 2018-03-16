@@ -8,6 +8,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 // Pages
+import { MainPage } from '../pages/main/main';
 import { HomePage } from '../pages/home/home';
 import { FooterPage } from '../pages/footer/footer';
 import { LoginPage } from '../pages/login/login';
@@ -28,6 +29,7 @@ import { NewsProvider } from '../providers/news/news';
 @NgModule({
   declarations: [
     MyApp,
+    MainPage,
     LoginPage,
     HomePage,
     FooterPage,
@@ -51,6 +53,7 @@ import { NewsProvider } from '../providers/news/news';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    MainPage,
     LoginPage,
     HomePage,
     FooterPage,
