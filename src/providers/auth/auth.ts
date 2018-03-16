@@ -90,7 +90,6 @@ export class AuthProvider {
               if (results['message'] != undefined && results['message'] === "Your account has been created successfully") {
                 access = true;
               }
-              console.log(results);
               observer.next(access);
               observer.complete();
             },

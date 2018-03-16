@@ -3,7 +3,6 @@ import { App, LoadingController, IonicPage, NavController, NavParams, Tabs } fro
 
 import { ModifyProfilePage } from '../modify-profile/modify-profile';
 import { LoginPage } from '../login/login';
-import { MainPage } from '../main/main';
 
 // Providers
 import { AuthProvider } from '../../providers/auth/auth';

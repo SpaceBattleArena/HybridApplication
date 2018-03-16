@@ -10,7 +10,6 @@ import { MyApp } from './app.component';
 // Pages
 import { MainPage } from '../pages/main/main';
 import { HomePage } from '../pages/home/home';
-import { FooterPage } from '../pages/footer/footer';
 import { LoginPage } from '../pages/login/login';
 import { SubscribePage } from '../pages/subscribe/subscribe';
 import { ParametersPage } from '../pages/parameters/parameters';
@@ -23,7 +22,6 @@ import { NewsPage } from '../pages/news/news';
 // Providers
 import { AuthProvider } from '../providers/auth/auth';
 import { UserProvider } from '../providers/user/user';
-import { HomeProvider } from '../providers/home/home';
 import { NewsProvider } from '../providers/news/news';
 
 @NgModule({
@@ -32,7 +30,6 @@ import { NewsProvider } from '../providers/news/news';
     MainPage,
     LoginPage,
     HomePage,
-    FooterPage,
     SubscribePage,
     ParametersPage,
     ShopPage,
@@ -56,7 +53,6 @@ import { NewsProvider } from '../providers/news/news';
     MainPage,
     LoginPage,
     HomePage,
-    FooterPage,
     SubscribePage,
     ParametersPage,
     ShopPage,
@@ -71,7 +67,6 @@ import { NewsProvider } from '../providers/news/news';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthProvider,
     UserProvider,
-    HomeProvider,
     NewsProvider
   ]
 })

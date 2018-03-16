@@ -6,8 +6,8 @@ import { ParametersPage } from '../parameters/parameters';
 import { NewsPage } from '../news/news';
 
 // Providers
-import { HomeProvider } from '../../providers/home/home';
 import { UserProvider } from '../../providers/user/user';
+import { NewsProvider } from '../../providers/news/news';
 
 // data
 import { Topic } from '../../data/topic';
@@ -26,9 +26,11 @@ export class HomePage {
   public currentUser: User;
   public pushNews = NewsPage;
   public params = [];
+  public userInformations: any = [];
 
   constructor(
-    private HomeProvider: HomeProvider,
+    private NewsProvider: NewsProvider,
+    private UserProvider: UserProvider,
     public navCtrl: NavController,
     public navParams: NavParams) {
   }
@@ -41,7 +43,7 @@ export class HomePage {
   // When the page is loaded, the data are updated
   ngOnInit(): void {
     this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
-    this.HomeProvider.getAll()
+    this.NewsProvider.getAll()
       .subscribe(
       topics => {
         this.topics = topics;
@@ -49,5 +51,14 @@ export class HomePage {
           this.params.push({'id':this.topics[i].ID});
         }
       });
+    this.UserProvider.getInformations(this.currentUser.token)
+        .subscribe(
+          userInformations => {
+            this.userInformations = userInformations;
+          },
+          error => {
+            console.log(error);
+          }
+        );
   }
 }

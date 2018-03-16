@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { Headers, Http } from "@angular/http";
+import { Http } from "@angular/http";
 import { Observable } from "rxjs/Observable";
 
 import "rxjs/Rx"
@@ -38,7 +38,6 @@ export class NewsProvider {
                     if (results['results'] != undefined) {
                         results = results['results'];
                     }
-                    console.log(results);
                     if (results['data'] != undefined) {
                         observer.next(results['data'][0]);
                     } else {

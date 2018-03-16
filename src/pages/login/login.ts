@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { NavController, AlertController, LoadingController, Loading, IonicPage } from 'ionic-angular';
 
 // Pages
-import { HomePage } from '../home/home';
 import { MainPage } from '../main/main';
 import { SubscribePage } from '../subscribe/subscribe';
 // Providers
@@ -31,15 +30,11 @@ export class LoginPage implements OnInit {
   }
 
   private getInformations() {
-    console.log(this.currentUser);
     if (this.currentUser.token != undefined && this.currentUser.token != null && this.currentUser.token != "") {
-      console.log('ok');
-      this.userProvider.getInformations(this.currentUser.token)
+      this.userProvider.getInformationsAccess(this.currentUser.token)
         .subscribe(
           allowed => {
-            console.log(allowed);
             if (allowed) {
-              console.log('redirect');
               this.nav.setRoot(MainPage);
             } else {
               this.registerCredentials.email = this.currentUser.email;
