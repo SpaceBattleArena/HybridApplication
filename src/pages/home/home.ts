@@ -3,6 +3,7 @@ import { NavController, NavParams } from 'ionic-angular';
 
 // Pages
 import { ParametersPage } from '../parameters/parameters';
+import { NewsPage } from '../news/news';
 
 // Providers
 import { HomeProvider } from '../../providers/home/home';
@@ -23,6 +24,8 @@ export class HomePage {
 
   public topics: Topic[];
   public currentUser: User;
+  public pushNews = NewsPage;
+  public params = [];
 
   constructor(
     private HomeProvider: HomeProvider,
@@ -35,11 +38,6 @@ export class HomePage {
     this.navCtrl.push(ParametersPage);
   }
 
-  // Event to access the detail of the clicked topic
-  topicEvent() {
-    console.log('ionViewDidLoad TopicPage');
-  }
-
   // When the page is loaded, the data are updated
   ngOnInit(): void {
     this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
@@ -47,7 +45,9 @@ export class HomePage {
       .subscribe(
       topics => {
         this.topics = topics;
-        console.log(this.topics);
+        for (let i = 0; i < this.topics.length; i++) {
+          this.params.push({'id':this.topics[i].ID});
+        }
       });
   }
 }

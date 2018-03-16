@@ -27,13 +27,13 @@
             </ion-row>
         </ion-grid>
     </div>
-    <div class="news-card">
-        <ion-card responsive-sm wrap *ngFor="let item of topics">
+    <div class="news-card" *ngIf="params != []">
+        <ion-card responsive-sm wrap *ngFor="let item of topics; let i = index" [navPush]="pushNews" [navParams]="params[i]">
             <ion-grid>
                 <ion-row>
                     <ion-col>
                         <img src="http://localhost:3000/{{item.Slug}}">
-                        <ion-card-content (click)="topicEvent()">
+                        <ion-card-content>
                             <ion-card-title>{{ item.Title }}</ion-card-title>
                             <p>{{ item.Description }}</p>
                         </ion-card-content>

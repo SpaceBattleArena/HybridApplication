@@ -23,7 +23,6 @@ export class FooterPage implements OnInit {
 
   ngOnInit() {
     let currentPage = this.navCtrl.getActive().component.name;
-    console.log(currentPage);
     if (currentPage === "ForgePage") {
       this.linkActive = 'forge';
     } else if (currentPage === "ShopPage") {

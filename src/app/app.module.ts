@@ -17,11 +17,13 @@ import { ShopPage } from '../pages/shop/shop';
 import { ForgePage } from '../pages/forge/forge';
 import { RankingPage } from '../pages/ranking/ranking';
 import { ModifyProfilePage } from '../pages/modify-profile/modify-profile';
+import { NewsPage } from '../pages/news/news';
 
 // Providers
 import { AuthProvider } from '../providers/auth/auth';
 import { UserProvider } from '../providers/user/user';
 import { HomeProvider } from '../providers/home/home';
+import { NewsProvider } from '../providers/news/news';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,8 @@ import { HomeProvider } from '../providers/home/home';
     ShopPage,
     ForgePage,
     RankingPage,
-    ModifyProfilePage
+    ModifyProfilePage,
+    NewsPage
   ],
   imports: [
     BrowserModule,
@@ -56,7 +59,8 @@ import { HomeProvider } from '../providers/home/home';
     ShopPage,
     ForgePage,
     RankingPage,
-    ModifyProfilePage
+    ModifyProfilePage,
+    NewsPage
   ],
   providers: [
     StatusBar,
@@ -64,7 +68,8 @@ import { HomeProvider } from '../providers/home/home';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthProvider,
     UserProvider,
-    HomeProvider
+    HomeProvider,
+    NewsProvider
   ]
 })
 export class AppModule {}
