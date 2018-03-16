@@ -28,8 +28,8 @@
                 </ion-col>
                 <ion-col>
                     <button ion-button icon-only clear (click)="rankingEvent()">
-                      <ion-icon *ngIf="linkActive === 'rank'; else UnactiveShop" name="podium" class="active"></ion-icon>
-                      <ng-template #UnactiveShop>
+                      <ion-icon *ngIf="linkActive === 'rank'; else UnactiveRank" name="podium" class="active"></ion-icon>
+                      <ng-template #UnactiveRank>
                         <ion-icon name="podium" class="unactive"></ion-icon>
                       </ng-template>
                     </button>
