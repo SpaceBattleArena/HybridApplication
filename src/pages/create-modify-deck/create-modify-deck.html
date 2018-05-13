@@ -1,0 +1,64 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>create-modify-deck</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    <button ion-button full color="danger">Supprimer</button>
+    <ion-row id="div1" (drop)="dropInDeck($event)" (dragover)="allowDrop($event)" class="deck">
+        <ion-col *ngFor="let card of cardsListDeck; let i = index" col-2>
+            <div *ngIf="card === null; else CardBlock">
+                <p>{{i+1}}</p>
+            </div>
+            <ng-template #CardBlock>
+                <img src="http://localhost:3000/articles/sprite2.png" alt="" />
+            </ng-template>
+        </ion-col>
+    </ion-row>
+    <div class="add-filter">
+        <button ion-button full (click)="displayFilters()">Ajouter des filtres</button>
+    </div>
+    <ion-row id="div2" (drop)="dropInCardsList($event)" (dragover)="allowDrop($event)" class="list-cards">
+        <ion-col *ngFor="let card of display_cards; let i = index" col-2 draggable="true" (dragstart)="drag($event, card, i)" id="drag1">
+            <img src="http://localhost:3000/articles/sprite2.png" alt="" />
+            <ion-badge color="secondary" item-end>{{card.Number}}</ion-badge>
+        </ion-col>
+    </ion-row>
+    <div class="add-filter">
+        <button ion-button full (click)="saveDeck()">Enregistrer</button>
+    </div>
+    <div class="filter-black-screen" id="filter-black-screen" (click)="hideFilters()"></div>
+    <div class="filter-container" id="filters">
+        <h2 class="filters-title">Filtres</h2>
+        <ion-list>
+            <ion-item>
+                <ion-label>Type</ion-label>
+                <ion-select [(ngModel)]="type" (ionChange)="onChangeFilter($event)">
+                    <ion-option *ngFor="let value of types_list" value="{{value}}">{{value}}</ion-option>
+                </ion-select>
+            </ion-item>
+        </ion-list>
+        <ion-list>
+            <ion-item>
+                <ion-label>Rareté</ion-label>
+                <ion-select [(ngModel)]="rarity" (ionChange)="onChangeFilter($event)">
+                    <ion-option *ngFor="let rar of rarities_list; let i = index" value="{{i}}">{{rar}}</ion-option>
+                </ion-select>
+            </ion-item>
+        </ion-list>
+        <ion-list>
+            <ion-item>
+                <ion-label>Coût</ion-label>
+                <ion-select [(ngModel)]="cost" (ionChange)="onChangeFilter($event)">
+                    <ion-option value="-1">Tous</ion-option>
+                    <ion-option *ngFor="let val of [0, 100, 200, 300, 400, 500, 600, 700, 800]" value="{{val}}">{{val}}</ion-option>
+                </ion-select>
+            </ion-item>
+        </ion-list>
+        <button ion-button full (click)="hideFilters()">Fermer</button>
+    </div>
+</ion-content>

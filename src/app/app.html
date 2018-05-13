@@ -1,1 +1,23 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu [content]="content">
+    <ion-content class="menu">
+        <img src="assets/imgs/avatar.jpg" alt="avatar" class="avatar" />
+        <div class="username text" *ngIf="currentUser != null">{{currentUser.name}}</div>
+        <div class="lvl text" *ngIf="currentUser != null">LVL : {{userInformations.Part}}</div>
+        <ion-list>
+            <button margin-top ion-button clear full class="text">Modifier profil</button>
+
+            <button margin-top ion-button clear full class="text">Centre de connaissance</button>
+            <button ion-button clear full class="text">Aide & Assistance</button>
+            <button ion-button clear full class="text">Contactez-nous</button>
+
+            <button margin-top ion-button clear full class="text">Conditions d'utilisation</button>
+            <button ion-button clear full class="text">Politique de confidentialité</button>
+            <button ion-button clear full class="text">Mentions légales</button>
+            <button ion-button clear full class="text">Remerciements</button>
+
+            <button ion-button margin-top clear class="text" (click)="disconnectEvent()" full>Déconnexion</button>
+        </ion-list>
+    </ion-content>
+</ion-menu>
+
+<ion-nav #content [root]="rootPage"></ion-nav>

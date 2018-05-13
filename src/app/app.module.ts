@@ -18,11 +18,19 @@ import { ForgePage } from '../pages/forge/forge';
 import { RankingPage } from '../pages/ranking/ranking';
 import { ModifyProfilePage } from '../pages/modify-profile/modify-profile';
 import { NewsPage } from '../pages/news/news';
+import { CardsListPage } from '../pages/cards-list/cards-list';
+import { CardPage } from '../pages/card/card';
+import { DecksListPage } from '../pages/decks-list/decks-list';
+import { CreateModifyDeckPage } from '../pages/create-modify-deck/create-modify-deck';
 
 // Providers
 import { AuthProvider } from '../providers/auth/auth';
 import { UserProvider } from '../providers/user/user';
 import { NewsProvider } from '../providers/news/news';
+import { CardsProvider } from '../providers/cards/cards';
+import { DecksProvider } from '../providers/deck/deck';
+import { HerosProvider } from '../providers/heros/heros';
+import { BoosterProvider } from '../providers/booster/booster';
 
 @NgModule({
   declarations: [
@@ -36,7 +44,11 @@ import { NewsProvider } from '../providers/news/news';
     ForgePage,
     RankingPage,
     ModifyProfilePage,
-    NewsPage
+    NewsPage,
+    CardsListPage,
+    CardPage,
+    DecksListPage,
+    CreateModifyDeckPage
   ],
   imports: [
     BrowserModule,
@@ -59,7 +71,11 @@ import { NewsProvider } from '../providers/news/news';
     ForgePage,
     RankingPage,
     ModifyProfilePage,
-    NewsPage
+    NewsPage,
+    CardsListPage,
+    CardPage,
+    DecksListPage,
+    CreateModifyDeckPage
   ],
   providers: [
     StatusBar,
@@ -67,7 +83,11 @@ import { NewsProvider } from '../providers/news/news';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthProvider,
     UserProvider,
-    NewsProvider
+    NewsProvider,
+    CardsProvider,
+    DecksProvider,
+    HerosProvider,
+    BoosterProvider
   ]
 })
 export class AppModule {}

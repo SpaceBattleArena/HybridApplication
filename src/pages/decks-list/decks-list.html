@@ -1,0 +1,23 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>decks</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-row *ngFor="let hero_deck of herosDeck; let h = index">
+        <ion-col>
+            <img src="{{hero_deck.hero.Image}}" alt="{{hero_deck.hero.Name}}" />
+        </ion-col>
+        <ion-col>
+            <ion-row>
+                <ion-col *ngFor="let deck of hero_deck.decks; let i = index" [navPush]="createModifyPush" [navParams]="ModifyParams[i]">
+                    <p>{{deck.Name}}</p>
+                </ion-col>
+                <ion-col>
+                    <button ion-button primary [navPush]="createModifyPush" [navParams]="createParams[h]">+</button>
+                </ion-col>
+            </ion-row>
+        </ion-col>
+    </ion-row>
+</ion-content>

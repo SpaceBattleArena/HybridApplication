@@ -31,7 +31,7 @@ export class NewsProvider {
 
     getById(id: number) {
         return Observable.create(observer => {
-            this.http.get(this.apiUrl + "article/getById/"+id.toString())
+            this.http.get(this.apiUrl + "article/"+id.toString())
                 .toPromise()
                 .then(res => {
                     let results = res.json();

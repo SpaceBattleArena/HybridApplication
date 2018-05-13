@@ -1,0 +1,112 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>cards_list</ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+    <ion-row class="cards-filter">
+        <ion-col class="content-button">
+            <button *ngIf="is_possesses; else noPossesses" ion-button full class="button-filter select">Possédé</button>
+            <ng-template #noPossesses>
+                <button ion-button full class="button-filter" (click)="changeToPossesses()">Possédé</button>
+            </ng-template>
+        </ion-col>
+        <ion-col class="content-button">
+            <button *ngIf="is_missing; else noMissing" ion-button full class="button-filter select">Manquante</button>
+            <ng-template #noMissing>
+                <button ion-button full class="button-filter" (click)="changeToMissing()">Manquante</button>
+            </ng-template>
+        </ion-col>
+        <ion-col class="content-button">
+            <button *ngIf="is_all; else noAll" ion-button full class="button-filter select">Toutes</button>
+            <ng-template #noAll>
+                <button ion-button full class="button-filter" (click)="changeToAll()">Toutes</button>
+            </ng-template>
+        </ion-col>
+    </ion-row>
+    <div class="add-filter">
+        <button ion-button full (click)="displayFilters()">Ajouter des filtres</button>
+    </div>
+    <div *ngIf="display_cards.length == 0; else CardsListBlock">
+        <p style="text-align: center;">Vous n'avez pas de cartes correspondant à ces critères</p>
+    </div>
+    <ng-template #CardsListBlock>
+        <ion-row>
+            <ion-col *ngFor="let card of display_cards; let i = index" col-2 (click)="displayCard(i)">
+                <img *ngIf="card.value === 'possessed'; else MissingCardBlock" src="http://localhost:3000/articles/sprite2.png" alt="{{card.card.Name}}" />
+                <ng-template #MissingCardBlock>
+                    <img src="http://localhost:3000/articles/sprite2.png" alt="{{card.card.Name}}" style="-webkit-filter: grayscale(100%);filter: grayscale(100%);" />
+                </ng-template>
+            </ion-col>
+        </ion-row>
+        <!--<ion-card *ngFor="let card of cards">
+            <ion-row>
+                <ion-col>
+                    <h2>{{card.Name}}</h2>
+                </ion-col>
+                <ion-col>
+                    <div>{{card.Cost}}</div>
+                </ion-col>
+            </ion-row>
+            <img src="{{card.Sprite}}" />
+            <ion-row>
+                <ion-col>
+                    <div>{{card.Type}}</div>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <div>{{card.ATK}}</div>
+                </ion-col>
+                <ion-col>
+                    <div>{{card.HP}}</div>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <div>{{card.Faction}}</div>
+                </ion-col>
+            </ion-row>
+        </ion-card>-->
+    </ng-template>
+    <div class="filter-black-screen" id="filter-black-screen" (click)="hideFilters()"></div>
+    <div class="filter-container" id="filters">
+        <h2 class="filters-title">Filtres</h2>
+        <ion-list>
+            <ion-item>
+                <ion-label>Faction</ion-label>
+                <ion-select [(ngModel)]="faction" (ionChange)="onChangeFilter($event)">
+                    <ion-option *ngFor="let value of factions_list" value="{{value}}">{{value}}</ion-option>
+                </ion-select>
+            </ion-item>
+        </ion-list>
+        <ion-list>
+            <ion-item>
+                <ion-label>Type</ion-label>
+                <ion-select [(ngModel)]="type" (ionChange)="onChangeFilter($event)">
+                    <ion-option *ngFor="let value of types_list" value="{{value}}">{{value}}</ion-option>
+                </ion-select>
+            </ion-item>
+        </ion-list>
+        <ion-list>
+            <ion-item>
+                <ion-label>Rareté</ion-label>
+                <ion-select [(ngModel)]="rarity" (ionChange)="onChangeFilter($event)">
+                    <ion-option *ngFor="let rar of rarities_list; let i = index" value="{{i}}">{{rar}}</ion-option>
+                </ion-select>
+            </ion-item>
+        </ion-list>
+        <ion-list>
+            <ion-item>
+                <ion-label>Coût</ion-label>
+                <ion-select [(ngModel)]="cost" (ionChange)="onChangeFilter($event)">
+                    <ion-option value="-1">Tous</ion-option>
+                    <ion-option *ngFor="let val of [0, 100, 200, 300, 400, 500, 600, 700, 800]" value="{{val}}">{{val}}</ion-option>
+                </ion-select>
+            </ion-item>
+        </ion-list>
+        <button ion-button full (click)="hideFilters()">Fermer</button>
+    </div>
+</ion-content>

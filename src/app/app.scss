@@ -1,6 +1,4 @@
 // http://ionicframework.com/docs/theming/
-
-
 // App Global Sass
 // --------------------------------------------------
 // Put style rules here that you want to apply globally. These
@@ -14,3 +12,83 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+ion-menu {
+    ion-content.menu {
+        background-image: url(../assets/imgs/space4.jpg);
+        background-size: cover;
+        img.avatar {
+            width: 40%;
+            margin: 10px 30% 0 30%;
+            border-radius: 50%;
+            border: 2px solid #ef480e;
+        }
+        .text {
+            color: white;
+            text-align: center;
+        }
+        .username {
+            font-size: 1.5em;
+            font-weight: 700;
+        }
+        ion-list {
+            border-top: 2px solid #ef480e;
+            margin-top: 10px;
+            button {
+                background: transparent;
+                padding: 0;
+                div.item-inner {
+                    border: 0;
+                }
+            }
+        }
+    }
+}
+
+div.title {
+    margin-top: 20px;
+    div.orange-divider {
+        position: relative;
+        width: 100%;
+        height: 1px;
+        max-width: 100px;
+        background-color: #ef480e;
+        -webkit-transform-origin: 0% 50%;
+        -ms-transform-origin: 0% 50%;
+        transform-origin: 0% 50%;
+        div.third {
+            position: absolute;
+            left: 0px;
+            width: 43.33333333%;
+            height: 3px;
+            background-color: #ef480e;
+            -webkit-transform-origin: 0% 50%;
+            -ms-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+            div.tiny-orange-call-out {
+                position: absolute;
+                left: 110%;
+                top: -7px;
+                width: 120px;
+                font-family: Roboto, sans-serif;
+                color: #ef480e;
+                font-size: 11px;
+                font-weight: 500;
+            }
+        }
+        div.third.upper {
+            left: auto;
+            top: -2px;
+            right: 0px;
+            width: 23.33333333%;
+            height: 2px;
+        }
+    }
+    ion-title.title-text {
+        text-align: center;
+        margin-top: -13px;
+        div.toolbar-title {
+            color: white;
+            font-weight: 400;
+        }
+    }
+}

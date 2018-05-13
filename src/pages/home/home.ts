@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, MenuController } from 'ionic-angular';
 
 // Pages
 import { ParametersPage } from '../parameters/parameters';
@@ -32,7 +32,8 @@ export class HomePage {
     private NewsProvider: NewsProvider,
     private UserProvider: UserProvider,
     public navCtrl: NavController,
-    public navParams: NavParams) {
+    public navParams: NavParams,
+    public menuCtrl: MenuController) {
   }
 
   // Event to access the parameters page
@@ -47,6 +48,7 @@ export class HomePage {
       .subscribe(
       topics => {
         this.topics = topics;
+        this.topics.reverse();
         for (let i = 0; i < this.topics.length; i++) {
           this.params.push({'id':this.topics[i].ID});
         }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController, AlertController, LoadingController, Loading, IonicPage } from 'ionic-angular';
+import { NavController, AlertController, LoadingController, Loading, IonicPage, Events, MenuController } from 'ionic-angular';
 
 // Pages
 import { MainPage } from '../main/main';
@@ -20,7 +20,7 @@ export class LoginPage implements OnInit {
   registerCredentials = { email: '', password: '' };
   currentUser: User;
 
-  constructor( private nav: NavController, private auth: AuthProvider, private userProvider: UserProvider, private alertCtrl: AlertController, private loadingCtrl: LoadingController) { }
+  constructor(private nav: NavController, private auth: AuthProvider, public events: Events, private menuCtrl: MenuController, private userProvider: UserProvider, private alertCtrl: AlertController, private loadingCtrl: LoadingController) { }
 
   ngOnInit() {
     this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
@@ -53,6 +53,7 @@ export class LoginPage implements OnInit {
     this.showLoading();
     this.auth.login(this.registerCredentials).subscribe(allowed => {
       if (allowed) {
+        this.events.publish('user:login');
         this.nav.setRoot(MainPage);
       } else {
         this.showError("L'email et le mot de passe que vous avez entrés ne correspondent pas à ceux présents dans nos fichiers. Veuillez vérifier et réessayer.");
@@ -93,5 +94,13 @@ export class LoginPage implements OnInit {
 
   registrationEvent() {
       this.nav.push(SubscribePage);
+  }
+
+  ionViewDidEnter() {
+    this.menuCtrl.enable(false);
+  }
+
+  ionViewWillLeave() {
+    this.menuCtrl.enable(true);
   }
 }

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, MenuController, Events } from 'ionic-angular';
 
 //pages
 import { HomePage } from '../home/home';
@@ -17,12 +17,27 @@ export class MainPage {
   shop:any = ShopPage;
   forge:any = ForgePage;
   rank:any = RankingPage;
+  public isDisplayed: boolean = true;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private menuCtrl: MenuController, public events: Events) {
+    events.subscribe('menu:hide', () => {
+      this.isDisplayed = false;
+    });
+    events.subscribe('menu:display', () => {
+      this.isDisplayed = true;
+    });
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad MainPage');
+  }
+
+  public openMenu() {
+    this.menuCtrl.open();
+  }
+
+  public closeMenu() {
+    this.menuCtrl.close();
   }
 
 }

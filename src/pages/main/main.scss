@@ -21,4 +21,36 @@ page-main {
     .tabbar::before {
         background-color: #ef480e;
     }
+    .button-clear-md-orange {
+        color: #ef480e;
+    }
+    ion-header.main-header {
+        border-bottom: 2px solid #1c2e46;
+        background-color: rgba(28, 46, 70, .65);
+        ion-navbar.toolbar-md-transparent {
+            div {
+                background: transparent;
+            }
+            ion-title {
+                img.logo {
+                    position: absolute;
+                    top: 0.5vh;
+                    left: 12.5vh;
+                }
+            }
+        }
+    }
+    page-home,
+    page-forge,
+    page-shop,
+    page-ranking {
+        background-image: url(../assets/imgs/space5.jpg);
+        margin-bottom: calc(8rem + 56px);
+        ion-content {
+            margin-top: 56px;
+            div.scroll-content {
+                margin-bottom: 96px !important;
+            }
+        }
+    }
 }

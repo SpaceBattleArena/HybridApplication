@@ -1,3 +1,14 @@
+<ion-header class="main-header" *ngIf="isDisplayed">
+    <ion-navbar color="transparent" id="main_header">
+        <ion-title>
+            <button ion-button icon-only clear color="orange" (click)="openMenu()">
+                <ion-icon name="menu"></ion-icon>
+            </button>
+            <img alt="logo" height="40" src="../assets/imgs/logo_sc.png" class="logo" />
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
 <ion-tabs class="tabs-icon">
     <ion-tab tabIcon="home" [root]="home"></ion-tab>
     <ion-tab tabIcon="hammer" [root]="forge"></ion-tab>

@@ -1,99 +1,95 @@
 page-home {
-  $primaryColor: "primary";
-  $secondaryColor: #757575;
-
-  .bgHeader {
-    // background: linear-gradient(to left, #161616 0%, #78909C 100%);
-    background-color: #FFF;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-  }
-
-  .bg {
-    background-image: url("../assets/imgs/space5.jpg");
-    background-repeat: repeat;
-    background-position: center;
-    background-size: contain;
-  }
-
-  .news-card {
-    margin-top: 136px;
-  }
-
-  .item-inner {
-    border-bottom-color: #9E9E9E !important;
-    box-shadow: none !important;
-  }
-
-  #settings {
-    float: right;
-    color: $secondaryColor;
-  }
-
-  .header {
-    text-align: center;
-  }
-
-  img {
-    width: 50%;
-    height: 100%;
-    display: inline-block;
-  }
-
-  ion-content {
-    color: #8D8D8D;
-  }
-
-  ion-card-content {
-    overflow: hidden;
-    float: right;
-    width: 50%;
-    height: 100%;
-    padding-top: 0 !important;
-    margin-top: 100 !important;
-  }
-
-  ion-card.card {
-    box-shadow: none;
-    background: rgba(255, 255, 255, 0.2) !important;
-    border-radius: 5px;
-  }
-
-  ion-card-title {
-    font-size: 3vw !important;
-    font-weight: bold;
-    color: #fff !important;
-  }
-
-  p {
-    font-size: 0.85em !important;
-    font-size: 2.7vw !important;
-    display: block;
-    display: -webkit-box;
-    height: auto;
-    -webkit-line-clamp: 5;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    color: #fff !important;
-  }
-
-  .active {
-    color: $primaryColor;
-  }
-
-  .unactive {
-    color: $secondaryColor;
-  }
-
-  #logo {
-    width: 7em;
-  }
-
-  .footer-toolbar {
-    text-align: center;
-    // background-color: #161616 !important;
-  }
+    $primaryColor: "primary";
+    $secondaryColor: #757575;
+    .bgHeader {
+        // background: linear-gradient(to left, #161616 0%, #78909C 100%);
+        background-color: #FFF;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+    }
+    .bg {
+        background-image: url("../assets/imgs/space5.jpg");
+        background-repeat: repeat;
+        background-position: center;
+        background-size: contain;
+    }
+    .item-inner {
+        border-bottom-color: #9E9E9E !important;
+        box-shadow: none !important;
+    }
+    #settings {
+        float: right;
+        color: $secondaryColor;
+    }
+    .header {
+        text-align: center;
+    }
+    img {
+        width: 50%;
+        height: 100%;
+        display: inline-block;
+    }
+    ion-content {
+        color: #8D8D8D;
+    }
+    ion-card-content {
+        overflow: hidden;
+        float: right;
+        width: 50%;
+        height: 100%;
+        padding-top: 0 !important;
+        margin-top: 100 !important;
+    }
+    div.news-card {
+        ion-card.card {
+            box-shadow: none;
+            background: rgba(255, 255, 255, 0.2) !important;
+            border-radius: 5px;
+            display: inline-flex;
+            height: 100px;
+            div.img-news {
+                width: 50%;
+                border-right: 2px solid #ef480e;
+                img {
+                    width: 100%;
+                }
+            }
+            div.news-informations {
+                width: 50%;
+                padding: 0 10px;
+                ion-card-title {
+                    font-size: 3.5vw !important;
+                    font-weight: bold;
+                    color: #fff !important;
+                }
+                p {
+                    font-size: 0.85em !important;
+                    font-size: 2.7vw !important;
+                    display: block;
+                    display: -webkit-box;
+                    height: auto;
+                    -webkit-line-clamp: 5;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    color: #fff !important;
+                }
+            }
+        }
+    }
+    .active {
+        color: $primaryColor;
+    }
+    .unactive {
+        color: $secondaryColor;
+    }
+    #logo {
+        width: 7em;
+    }
+    .footer-toolbar {
+        text-align: center;
+        // background-color: #161616 !important;
+    }
 }

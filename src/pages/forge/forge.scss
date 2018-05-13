@@ -1,22 +1,38 @@
 page-forge {
-  $primaryColor: "primary";
-  $secondaryColor: #757575;
-
-  .active {
-    color: $primaryColor;
-  }
-
-  .unactive {
-    color: $secondaryColor;
-  }
-
-  #logo {
-    width: 7em;
-  }
-
-  .footer {}
-
-  .footer-toolbar {
-    text-align: center;
-  }
+    $primaryColor: "primary";
+    $secondaryColor: #757575;
+    .active {
+        color: $primaryColor;
+    }
+    .unactive {
+        color: $secondaryColor;
+    }
+    #logo {
+        width: 7em;
+    }
+    .footer {}
+    .footer-toolbar {
+        text-align: center;
+    }
+    button.list-button {
+        height: 50%;
+        background-size: cover;
+        padding: 0;
+        margin: 0;
+        background-color: transparent;
+        span.button-inner {
+            background-color: rgba(0, 0, 0, 0.5);
+            font-family: Anton, sans-serif;
+            letter-spacing: 0.2rem;
+            font-size: 1.5rem;
+            text-shadow: 2px 2px black;
+        }
+    }
+    button.list-button.cards {
+        background-image: url(../assets/imgs/spaceShip.jpg);
+        border-bottom: 1px solid #ef480e;
+    }
+    button.list-button.decks {
+        background-image: url(../assets/imgs/angar.jpg);
+    }
 }
