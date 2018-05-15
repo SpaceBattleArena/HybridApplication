@@ -40,6 +40,9 @@ export class MyApp {
 
   public initMenu() {
     this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    if (this.currentUser === null) {
+      return;
+    }
     this.UserProvider.getInformations(this.currentUser.token)
         .subscribe(
           userInformations => {

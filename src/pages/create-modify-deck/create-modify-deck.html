@@ -15,7 +15,7 @@
                 <p>{{i+1}}</p>
             </div>
             <ng-template #CardBlock>
-                <img src="http://localhost:3000/articles/sprite2.png" alt="" />
+                <img src="http://ec2-13-59-89-177.us-east-2.compute.amazonaws.com:3000/articles/sprite2.png" alt="" />
             </ng-template>
         </ion-col>
     </ion-row>
@@ -24,7 +24,7 @@
     </div>
     <ion-row id="div2" (drop)="dropInCardsList($event)" (dragover)="allowDrop($event)" class="list-cards">
         <ion-col *ngFor="let card of display_cards; let i = index" col-2 draggable="true" (dragstart)="drag($event, card, i)" id="drag1">
-            <img src="http://localhost:3000/articles/sprite2.png" alt="" />
+            <img src="http://ec2-13-59-89-177.us-east-2.compute.amazonaws.com:3000/articles/sprite2.png" alt="" />
             <ion-badge color="secondary" item-end>{{card.Number}}</ion-badge>
         </ion-col>
     </ion-row>

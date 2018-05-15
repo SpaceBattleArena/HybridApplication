@@ -59,7 +59,7 @@
         <div class="line" id="line_open_booster"></div>
     </div>
     <div id="cards_list" class="cards-list">
-        <img *ngFor="let card of boosterCards; let i = index" src="http://localhost:3000/articles/back.png" alt="card-{{i}}" id="card_{{i}}" class="cards-booster" (click)="rotateCard(i)" />
+        <img *ngFor="let card of boosterCards; let i = index" src="http://ec2-13-59-89-177.us-east-2.compute.amazonaws.com:3000/articles/back.png" alt="card-{{i}}" id="card_{{i}}" class="cards-booster" (click)="rotateCard(i)" />
     </div>
     <div class="name-block close-button-animation" id="close-button-animation" (click)="closeAnimation()">
         <div class="name">Fermer</div>

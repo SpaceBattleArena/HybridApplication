@@ -35,9 +35,9 @@
     <ng-template #CardsListBlock>
         <ion-row>
             <ion-col *ngFor="let card of display_cards; let i = index" col-2 (click)="displayCard(i)">
-                <img *ngIf="card.value === 'possessed'; else MissingCardBlock" src="http://localhost:3000/articles/sprite2.png" alt="{{card.card.Name}}" />
+                <img *ngIf="card.value === 'possessed'; else MissingCardBlock" src="http://ec2-13-59-89-177.us-east-2.compute.amazonaws.com:3000/articles/sprite2.png" alt="{{card.card.Name}}" />
                 <ng-template #MissingCardBlock>
-                    <img src="http://localhost:3000/articles/sprite2.png" alt="{{card.card.Name}}" style="-webkit-filter: grayscale(100%);filter: grayscale(100%);" />
+                    <img src="http://ec2-13-59-89-177.us-east-2.compute.amazonaws.com:3000/articles/sprite2.png" alt="{{card.card.Name}}" style="-webkit-filter: grayscale(100%);filter: grayscale(100%);" />
                 </ng-template>
             </ion-col>
         </ion-row>

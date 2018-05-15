@@ -7,7 +7,7 @@ import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class NewsProvider {
-    private apiUrl = 'http://localhost:3000/';
+    private apiUrl = 'http://ec2-13-59-89-177.us-east-2.compute.amazonaws.com:3000/';
     constructor(private http: Http) {}
 
     getAll() {

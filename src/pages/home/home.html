@@ -10,7 +10,7 @@
     </div>
     <div class="news-card" *ngIf="params != []">
         <ion-card responsive-sm wrap *ngFor="let item of topics; let i = index" [navPush]="pushNews" [navParams]="params[i]">
-            <div class="img-news"><img src="http://localhost:3000/{{item.Slug}}" /></div>
+            <div class="img-news"><img src="http://ec2-13-59-89-177.us-east-2.compute.amazonaws.com:3000/{{item.Slug}}" /></div>
             <div class="news-informations">
                 <ion-card-title>{{ item.Title }}</ion-card-title>
                 <p [innerHTML]="item.Description"></p>
