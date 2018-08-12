@@ -1,23 +1,29 @@
-<ion-header>
-    <ion-navbar>
-        <ion-title>decks</ion-title>
+<ion-header class="back-header">
+    <ion-navbar class="back-navbar">
+        <ion-title>Liste des decks</ion-title>
     </ion-navbar>
 </ion-header>
 
 <ion-content>
-    <ion-row *ngFor="let hero_deck of herosDeck; let h = index">
-        <ion-col>
-            <img src="{{hero_deck.hero.Image}}" alt="{{hero_deck.hero.Name}}" />
+    <ion-row *ngFor="let hero_deck of herosDeck; let h = index" class="heros-decks">
+        <ion-col col-3 class="hero">
+            <img src="{{hero_deck.hero.Image}}" alt="{{hero_deck.hero.Name}}" class="hero-sprite" />
+            <p class="name">{{hero_deck.hero.Name}}</p>
         </ion-col>
-        <ion-col>
-            <ion-row>
-                <ion-col *ngFor="let deck of hero_deck.decks; let i = index" [navPush]="createModifyPush" [navParams]="ModifyParams[i]">
-                    <p>{{deck.Name}}</p>
-                </ion-col>
-                <ion-col>
-                    <button ion-button primary [navPush]="createModifyPush" [navParams]="createParams[h]">+</button>
-                </ion-col>
-            </ion-row>
+        <ion-col class="decks">
+            <div *ngFor="let deck of hero_deck.decks; let i = index" [navPush]="createModifyPush" [navParams]="ModifyParams[i]" class="deck">
+                <img src="assets/imgs/testBooster.png" alt="deck" class="deck-sprite" />
+                <p class="name">{{deck.Name}}</p>
+            </div>
+            <div class="add-deck" [navPush]="createModifyPush" [navParams]="createParams[h]">
+                <img src="assets/imgs/addDeck.png" alt="add_deck" class="add-img" />
+            </div>
         </ion-col>
+        <div class="orange-divider">
+            <div class="third upper">
+                <div class="tiny-orange-call-out">
+                </div>
+            </div>
+        </div>
     </ion-row>
 </ion-content>

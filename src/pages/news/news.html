@@ -1,12 +1,14 @@
-<ion-header>
-
-    <ion-navbar>
-        <ion-title>news</ion-title>
+<ion-header class="back-header">
+    <ion-navbar class="back-navbar">
+        <ion-title>Articles</ion-title>
     </ion-navbar>
-
 </ion-header>
 
 
-<ion-content padding>
-
+<ion-content *ngIf="topic != null">
+    <img src="http://ec2-13-59-89-177.us-east-2.compute.amazonaws.com:3000/{{topic.Slug}}" alt="article_img" class="article-img" />
+    <div class="article-content">
+        <h2 class="title">{{topic.Title}}</h2>
+        <p class="description" [innerHTML]="topic.Description"></p>
+    </div>
 </ion-content>

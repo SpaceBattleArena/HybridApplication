@@ -1,3 +1,70 @@
 page-decks-list {
-
+    .heros-decks {
+        margin: 5% 0;
+        height: 17vh;
+        .hero {
+            .hero-sprite {}
+            .name {
+                font-family: "space font", Helvetica, Arial, sans-serif;
+                font-size: 10px;
+                text-align: center;
+                color: white;
+            }
+        }
+        .decks {
+            overflow-x: scroll;
+            display: -webkit-box;
+            .deck {
+                width: 20%;
+                margin: 0 2%;
+                .deck-sprite {}
+                .name {
+                    margin: 0;
+                    text-align: center;
+                    font-size: 10px;
+                    color: white;
+                }
+            }
+            .add-deck {
+                width: 20%;
+                margin: 0 2%;
+            }
+        }
+    }
+    div.orange-divider {
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background-color: #ef480e;
+        -webkit-transform-origin: 0% 50%;
+        transform-origin: 0% 50%;
+        margin-top: 18vh;
+        div.third {
+            position: absolute;
+            left: 0px;
+            width: 43.33333333%;
+            height: 3px;
+            background-color: #ef480e;
+            -webkit-transform-origin: 0% 50%;
+            -ms-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+            div.tiny-orange-call-out {
+                position: absolute;
+                left: 110%;
+                top: -7px;
+                width: 120px;
+                font-family: Roboto, sans-serif;
+                color: #ef480e;
+                font-size: 11px;
+                font-weight: 500;
+            }
+        }
+        div.third.upper {
+            left: auto;
+            top: -2px;
+            left: 0px;
+            width: 25%;
+            height: 2px;
+        }
+    }
 }

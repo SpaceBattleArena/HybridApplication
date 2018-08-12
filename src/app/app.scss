@@ -45,7 +45,8 @@ ion-menu {
 }
 
 div.title {
-    margin-top: 20px;
+    margin-top: 4vh;
+    margin-bottom: 1vh;
     div.orange-divider {
         position: relative;
         width: 100%;
@@ -91,4 +92,9 @@ div.title {
             font-weight: 400;
         }
     }
+}
+
+@font-face {
+    font-family: "space font";
+    src: url('../assets/fonts/The\ Rave\ Is\ In\ Your\ Pants.otf');
 }

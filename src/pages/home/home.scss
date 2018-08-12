@@ -48,16 +48,16 @@ page-home {
             background: rgba(255, 255, 255, 0.2) !important;
             border-radius: 5px;
             display: inline-flex;
-            height: 100px;
+            height: 18vh;
             div.img-news {
-                width: 50%;
+                width: 40%;
                 border-right: 2px solid #ef480e;
                 img {
                     width: 100%;
                 }
             }
             div.news-informations {
-                width: 50%;
+                width: 60%;
                 padding: 0 10px;
                 ion-card-title {
                     font-size: 3.5vw !important;

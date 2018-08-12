@@ -54,6 +54,13 @@ export class CreateModifyDeckPage implements OnInit {
       {ID: 3, Name: 'Horde'}
   ];
 
+  //zoom card
+  public zoomCard: Card = null;
+  public countInDeck = 0;
+  public collection: number = 0;
+  public isDisplayRemove: boolean = false;
+  public isDisplayAdd: boolean = false;
+
   constructor(public navCtrl: NavController, public navParams: NavParams, public events: Events, public tabs: Tabs, private menuCtrl: MenuController, private cardProvider: CardsProvider, private deckProvider: DecksProvider, private herosProvider: HerosProvider) {
   }
 
@@ -81,6 +88,7 @@ export class CreateModifyDeckPage implements OnInit {
     this.heros = this.herosProvider.getAll();
     //---------------------------------------
     this.getAllCards();
+    console.log(this.deck);
   }
 
   private getCardById(id: Number) {
@@ -128,6 +136,13 @@ export class CreateModifyDeckPage implements OnInit {
             this.cardsListDeck.push(this.getCardById(this.deck.Card_18_id));
             this.cardsListDeck.push(this.getCardById(this.deck.Card_19_id));
             this.cardsListDeck.push(this.getCardById(this.deck.Card_20_id));
+            for (let j = 0; j < this.cards_all.length; j += 1) {
+              for (let i = 0; i < this.cardsListDeck.length; i += 1) {
+                if (this.cards_all[j].ID === this.cardsListDeck[i].ID) {
+                  this.cards_all[j].Number -= 1;
+                }
+              }
+            }
           }
           for (let i = 0; i < this.cards_all.length; i += 1) {
             if (this.cards_all[i].Faction === this.getFaction(this.hero) || this.cards_all[i].Faction === "Neutral") {
@@ -165,13 +180,8 @@ export class CreateModifyDeckPage implements OnInit {
   public dropInDeck(ev) {
     ev.preventDefault();
     var data = ev.dataTransfer.getData("card");
-    for (let i = 0; i < this.cardsListDeck.length; i += 1) {
-      if (this.cardsListDeck[i] === null) {
-        this.cardsListDeck[i] = JSON.parse(data);
-        return;
-      }
-    }
-    console.log("it's full");
+    data = JSON.parse(data)
+    this.addCard(data);
   }
 
   public dropInCardsList(ev) {
@@ -380,7 +390,92 @@ export class CreateModifyDeckPage implements OnInit {
         }
       );
     }
+    this.navParams.get('parent').reload();
     
+  }
+
+  public displayZoom(card: Card) {
+    let header = document.getElementById("header");
+    header.style.zIndex = "-1";
+    header.style.opacity = "0.3";
+    let zoomBlock = document.getElementById("zoom_card");
+    zoomBlock.classList.add("show");
+    this.collection = card.Number;
+    this.zoomCard = card;
+    for (let i = 0; i < this.cardsListDeck.length; i += 1) {
+      if (this.cardsListDeck[i] != null) {
+        if (this.cardsListDeck[i].ID === card.ID) {
+          this.countInDeck += 1;
+          this.collection -= 1;
+        }
+      }
+    }
+    if (this.countInDeck > 0) {
+      this.isDisplayRemove = true;
+    }
+    if (this.collection > 0) {
+      this.isDisplayAdd = true;
+    }
+  }
+
+  public closeZoom() {
+    let header = document.getElementById("header");
+    header.style.display = "block";
+    header.style.zIndex = "1";
+    header.style.opacity = "1";
+    let zoomBlock = document.getElementById("zoom_card");
+    zoomBlock.classList.remove("show");
+    this.countInDeck = 0;
+    this.collection = 0;
+    this.isDisplayRemove = false;
+    this.isDisplayAdd = false;
+    this.zoomCard = null;
+  }
+
+  public addCard(data: Card) {
+    for (let i = 0; i < this.cardsListDeck.length; i += 1) {
+      if (this.cardsListDeck[i] === null) {
+        this.cardsListDeck[i] = data;
+        this.collection -= 1;
+        this.countInDeck += 1;
+        this.isDisplayRemove = true;
+        this.cardsListDeck[i].Number -= 1;
+        return;
+      }
+    }
+    alert("Votre deck est complet");
+  }
+
+  public removeCard(card: Card) {
+    let isMove = false;
+    let isInDeck = false;
+    for (let i = 0; i < this.cardsListDeck.length; i += 1) {
+      if (this.cardsListDeck[i] != null) {
+        if (this.cardsListDeck[i].ID === card.ID) {
+          if (!isMove) {
+            this.collection += 1;
+            this.countInDeck -= 1;
+            this.cardsListDeck[i].Number += 1;
+          }
+          isMove = true;
+        }
+        if (isMove) {
+          if (i < 20) {
+            if (this.cardsListDeck[i].ID === card.ID) {
+              isInDeck = true;
+            }
+            this.cardsListDeck[i] = this.cardsListDeck[i+1];
+          } else {
+            this.cardsListDeck[i] = null;
+          }
+        }
+      } else {
+        this.cardsListDeck[i] = null;
+      }
+    }
+    if (!isInDeck) {
+      this.isDisplayRemove = false;
+    }
   }
 
 }

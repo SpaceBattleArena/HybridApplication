@@ -14,9 +14,9 @@ export class HerosProvider {
 
   public getAll() {
       return [
-          new Hero(1, 1, 'Yugi', 'http://localhost:3000/articles/champ-1.png'),
-          new Hero(2, 2, 'Kaiba', 'http://localhost:3000/articles/champ-2.png'),
-          new Hero(3, 1, 'Jaden', 'http://localhost:3000/articles/champ-3.png'),
+          new Hero(1, 1, 'Human', this.apiUrl + 'articles/hero_icon1.png'),
+          new Hero(2, 2, 'Rebel', this.apiUrl + 'articles/hero_icon2.png'),
+          new Hero(3, 1, 'Cyborg', this.apiUrl + 'articles/hero_icon3.png'),
       ]
   }
 }

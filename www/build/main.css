@@ -30401,7 +30401,8 @@ ion-menu ion-content.menu ion-list button div.item-inner {
 }
 
 div.title {
-  margin-top: 20px;
+  margin-top: 4vh;
+  margin-bottom: 1vh;
 }
 
 div.title div.orange-divider {
@@ -30451,6 +30452,11 @@ div.title ion-title.title-text {
 div.title ion-title.title-text div.toolbar-title {
   color: white;
   font-weight: 400;
+}
+
+@font-face {
+  font-family: "space font";
+  src: url("../assets/fonts/The Rave Is In Your Pants.otf");
 }
 
 page-cards-list ion-row.cards-filter ion-col.content-button {
@@ -30538,6 +30544,248 @@ page-create-modify-deck .filter-black-screen.show {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.75);
+}
+
+page-create-modify-deck .card-slot .number {
+  width: 100%;
+  height: 100%;
+  border: 1px solid white;
+}
+
+page-create-modify-deck .card-slot .number p {
+  color: white;
+  text-align: center;
+  width: 70%;
+  margin-left: 15%;
+  font-size: 3vh;
+}
+
+page-create-modify-deck div.zoom-card {
+  display: none;
+}
+
+page-create-modify-deck div.zoom-card.show {
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+page-create-modify-deck div.zoom-card.show img.card {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 10%;
+}
+
+page-create-modify-deck div.zoom-card.show div.add-remove {
+  position: absolute;
+  color: white;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 5%;
+}
+
+page-create-modify-deck div.zoom-card.show div.add-remove div.add {
+  height: 20vh;
+}
+
+page-create-modify-deck div.zoom-card.show div.add-remove div.add p.text {
+  font-size: 20px;
+  padding-top: 100%;
+}
+
+page-create-modify-deck div.zoom-card.show div.add-remove div.remove {
+  height: 20vh;
+}
+
+page-create-modify-deck div.zoom-card.show div.add-remove div.remove p.text {
+  font-size: 20px;
+  padding-top: 100%;
+}
+
+page-create-modify-deck div.zoom-card.show div.add-remove img.arrow {
+  height: 20vh;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+}
+
+page-create-modify-deck div.zoom-card.show div.in-deck {
+  position: absolute;
+  top: 0;
+  right: 5%;
+  color: white;
+  width: 8vh;
+  display: -webkit-box;
+  background-color: rgba(239, 72, 14, 0.7);
+  border-radius: 5px;
+}
+
+page-create-modify-deck div.zoom-card.show div.in-deck p {
+  text-align: center;
+  font-size: 20px;
+  margin: 5px 0px;
+  width: 100%;
+}
+
+page-create-modify-deck div.zoom-card.show div.collection {
+  color: white;
+  position: absolute;
+  bottom: 10vh;
+  right: 5vh;
+  background-color: #32db64;
+  border-radius: 5px;
+}
+
+page-create-modify-deck div.zoom-card.show div.collection p {
+  margin: 5px;
+  font-size: 20px;
+}
+
+page-create-modify-deck div.zoom-card.show div.name-block {
+  padding: 7px 0px;
+  background-color: rgba(28, 46, 70, 0.65);
+  -webkit-box-shadow: inset 0 0 0 1px rgba(91, 118, 155, 0.34);
+  box-shadow: inset 0 0 0 1px rgba(91, 118, 155, 0.34);
+  opacity: 1;
+  -webkit-transition: opacity 200ms ease, box-shadow 200ms ease;
+  -webkit-transition: opacity 200ms ease, -webkit-box-shadow 200ms ease;
+  transition: opacity 200ms ease, -webkit-box-shadow 200ms ease;
+  transition: opacity 200ms ease, box-shadow 200ms ease;
+  transition: opacity 200ms ease, box-shadow 200ms ease, -webkit-box-shadow 200ms ease;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: calc(100% - 10px);
+  position: absolute;
+  bottom: 0;
+  font-size: 10px;
+  text-align: center;
+  height: 7vh;
+}
+
+page-create-modify-deck div.zoom-card.show div.name-block div.name {
+  margin-top: 1vh;
+  font-size: 3vh;
+}
+
+page-create-modify-deck div.zoom-card.show div.name-block div.corner-upper-left {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 10px;
+  height: 10px;
+  border-top: 1px solid #5b769b;
+  border-left: 1px solid #5b769b;
+}
+
+page-create-modify-deck div.zoom-card.show div.name-block div.corner-upper-right {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 10px;
+  height: 10px;
+  border-top: 1px solid #5b769b;
+  border-right: 1px solid #5b769b;
+}
+
+page-create-modify-deck div.zoom-card.show div.name-block div.corner-bottom-right {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  width: 10px;
+  height: 10px;
+  border-right: 1px solid #5b769b;
+  border-bottom: 1px solid #5b769b;
+}
+
+page-create-modify-deck div.zoom-card.show div.name-block div.corner-bottom-left {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 10px;
+  height: 10px;
+  border-bottom: 1px solid #5b769b;
+  border-left: 1px solid #5b769b;
+}
+
+page-decks-list .heros-decks {
+  margin: 5% 0;
+  height: 17vh;
+}
+
+page-decks-list .heros-decks .hero .name {
+  font-family: "space font", Helvetica, Arial, sans-serif;
+  font-size: 10px;
+  text-align: center;
+  color: white;
+}
+
+page-decks-list .heros-decks .decks {
+  overflow-x: scroll;
+  display: -webkit-box;
+}
+
+page-decks-list .heros-decks .decks .deck {
+  width: 20%;
+  margin: 0 2%;
+}
+
+page-decks-list .heros-decks .decks .deck .name {
+  margin: 0;
+  text-align: center;
+  font-size: 10px;
+  color: white;
+}
+
+page-decks-list .heros-decks .decks .add-deck {
+  width: 20%;
+  margin: 0 2%;
+}
+
+page-decks-list div.orange-divider {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #ef480e;
+  -webkit-transform-origin: 0% 50%;
+  transform-origin: 0% 50%;
+  margin-top: 18vh;
+}
+
+page-decks-list div.orange-divider div.third {
+  position: absolute;
+  left: 0px;
+  width: 43.33333333%;
+  height: 3px;
+  background-color: #ef480e;
+  -webkit-transform-origin: 0% 50%;
+  transform-origin: 0% 50%;
+}
+
+page-decks-list div.orange-divider div.third div.tiny-orange-call-out {
+  position: absolute;
+  left: 110%;
+  top: -7px;
+  width: 120px;
+  font-family: Roboto, sans-serif;
+  color: #ef480e;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+page-decks-list div.orange-divider div.third.upper {
+  left: auto;
+  top: -2px;
+  left: 0px;
+  width: 25%;
+  height: 2px;
 }
 
 page-forge .active {
@@ -30639,11 +30887,11 @@ page-home div.news-card ion-card.card {
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 100px;
+  height: 18vh;
 }
 
 page-home div.news-card ion-card.card div.img-news {
-  width: 50%;
+  width: 40%;
   border-right: 2px solid #ef480e;
 }
 
@@ -30652,7 +30900,7 @@ page-home div.news-card ion-card.card div.img-news img {
 }
 
 page-home div.news-card ion-card.card div.news-informations {
-  width: 50%;
+  width: 60%;
   padding: 0 10px;
 }
 
@@ -30760,12 +31008,12 @@ page-main .content-md {
 
 page-main .tabs-md .tabbar {
   background-color: #1c2e46;
-  height: 4rem;
+  height: 6rem;
 }
 
 page-main .tabs-md .tab-button[aria-selected=true] {
   background-color: #ef480e;
-  min-height: 4rem;
+  min-height: 6rem;
 }
 
 page-main .tabs-md .tab-button[aria-selected=true] .tab-button-icon {
@@ -30787,16 +31035,69 @@ page-main .button-clear-md-orange {
 page-main ion-header.main-header {
   border-bottom: 2px solid #1c2e46;
   background-color: rgba(28, 46, 70, 0.65);
+  height: 10vh;
+}
+
+page-main ion-header.main-header ion-navbar.toolbar {
+  min-height: 10vh;
 }
 
 page-main ion-header.main-header ion-navbar.toolbar-md-transparent div {
   background: transparent;
 }
 
+page-main ion-header.main-header ion-navbar.toolbar-md-transparent ion-title button.button {
+  padding-left: 1em;
+  min-width: 2em;
+}
+
+page-main ion-header.main-header ion-navbar.toolbar-md-transparent ion-title button.button span.button-inner ion-icon {
+  padding: 0;
+  font-size: 2.8em;
+  line-height: .67;
+  pointer-events: none;
+}
+
 page-main ion-header.main-header ion-navbar.toolbar-md-transparent ion-title img.logo {
   position: absolute;
   top: 0.5vh;
-  left: 12.5vh;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+page-main ion-header.back-header {
+  border-bottom: 2px solid #1c2e46;
+  background-color: rgba(28, 46, 70, 0.65);
+  height: 10vh;
+}
+
+page-main ion-header.back-header ion-navbar.back-navbar {
+  min-height: 10vh;
+}
+
+page-main ion-header.back-header ion-navbar.back-navbar div.toolbar-background-md {
+  background: transparent;
+}
+
+page-main ion-header.back-header ion-navbar.back-navbar button.back-button {
+  color: #ef480e;
+  z-index: 1;
+}
+
+page-main ion-header.back-header ion-navbar.back-navbar ion-title {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+page-main ion-header.back-header ion-navbar.back-navbar ion-title div {
+  color: white;
+  font-family: "space font", Helvetica, Arial, sans-serif;
 }
 
 page-main page-home,
@@ -30811,14 +31112,32 @@ page-main page-home ion-content,
 page-main page-forge ion-content,
 page-main page-shop ion-content,
 page-main page-ranking ion-content {
-  margin-top: 56px;
+  margin-top: 10vh;
 }
 
 page-main page-home ion-content div.scroll-content,
 page-main page-forge ion-content div.scroll-content,
 page-main page-shop ion-content div.scroll-content,
 page-main page-ranking ion-content div.scroll-content {
-  margin-bottom: 96px !important;
+  margin-bottom: 18vh !important;
+}
+
+page-main page-decks-list,
+page-main page-cards-list,
+page-main page-create-modify-deck {
+  background-image: url(../assets/imgs/space5.jpg);
+}
+
+page-main page-news {
+  background-image: url(../assets/imgs/space5.jpg);
+}
+
+page-main page-news ion-content {
+  margin-top: 0vh;
+}
+
+page-main page-news ion-content div.scroll-content {
+  margin-bottom: 18vh !important;
 }
 
 page-modify-profile .bg {
@@ -30827,6 +31146,33 @@ page-modify-profile .bg {
 
 page-modify-profile ion-content {
   overflow: hidden;
+}
+
+page-news img.article-img {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 49%;
+  z-index: -1;
+}
+
+page-news div.article-content {
+  width: 90%;
+  margin-left: 5%;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 5px;
+  margin-top: 10vh;
+}
+
+page-news div.article-content h2.title {
+  padding: 10px 0 0 10px;
+  font-size: 29px;
+  text-align: center;
+}
+
+page-news div.article-content p.description {
+  padding: 10px;
+  font-size: 20px;
 }
 
 page-parameters .bg {
@@ -30877,7 +31223,7 @@ page-shop div.gold-user {
   color: white;
   background-color: rgba(239, 72, 14, 0.6);
   position: fixed;
-  top: 60px;
+  top: 10vh;
   right: 0;
   padding: 2px 10px;
   border-radius: 5px;
@@ -30975,6 +31321,7 @@ page-shop .extension {
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 5px;
   margin-top: 10px;
+  padding: 10px;
 }
 
 page-shop .item {
@@ -31151,6 +31498,86 @@ page-shop .confirm-payment .box .name-block.valid div.corner-bottom-right {
 page-shop .confirm-payment .box .name-block.valid div.corner-bottom-left {
   border-bottom: 2px solid green;
   border-left: 2px solid green;
+}
+
+page-shop div.content-buy-gold {
+  display: none;
+}
+
+page-shop div.content-buy-gold.show {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: block;
+}
+
+page-shop div.content-buy-gold.show div.buy-gold {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 70%;
+  left: 15%;
+  background-color: #1c2e46;
+  padding-bottom: 20px;
+}
+
+page-shop div.content-buy-gold.show div.buy-gold p.title {
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  margin: 15px 0;
+}
+
+page-shop div.content-buy-gold.show div.buy-gold div.cards {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  margin-left: 10%;
+  overflow-x: scroll;
+}
+
+page-shop div.content-buy-gold.show div.buy-gold div.cards div.card {
+  min-width: 17vh;
+  border: 1px solid white;
+  margin: 0 1vh;
+}
+
+page-shop div.content-buy-gold.show div.buy-gold div.cards div.card img.img {
+  width: 100%;
+}
+
+page-shop div.content-buy-gold.show div.buy-gold div.cards div.card p.price {
+  background-color: white;
+  margin: 0;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 21px;
+}
+
+page-shop div.error {
+  display: none;
+}
+
+page-shop div.error.show {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background-color: white;
+  width: 80%;
+  left: 10%;
+  display: block;
+}
+
+page-shop div.error.show .text {
+  font-size: 20px;
+  text-align: center;
 }
 
 page-subscribe .bg {

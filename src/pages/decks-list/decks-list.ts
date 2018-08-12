@@ -43,7 +43,7 @@ export class DecksListPage implements OnInit {
       this.getDecks();
     }
     for (let i = 0; i < this.heros.length; i += 1) {
-      this.createParams.push({deck: null, hero: this.heros[i]});
+      this.createParams.push({deck: null, hero: this.heros[i], parent: this});
     }
   }
 
@@ -86,6 +86,18 @@ export class DecksListPage implements OnInit {
         );
     } else {
       console.log('no current user');
+    }
+  }
+
+  reload() {
+    this.createParams = [];
+    this.herosDeck = [];
+    this.ModifyParams = [];
+    if (this.currentUser != null) {
+      this.getDecks();
+    }
+    for (let i = 0; i < this.heros.length; i += 1) {
+      this.createParams.push({deck: null, hero: this.heros[i], parent: this});
     }
   }
 

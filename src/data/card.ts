@@ -8,7 +8,7 @@ export class Card {
     Cost: Number;
     HP: Number;
     Rarity_id: Number;
-    Number: Number;
+    Number: number;
 
     constructor(ID, Name, Sprite, Faction, Type, ATK, Cost, HP, Rarity_id, number){
         this.ID = ID;

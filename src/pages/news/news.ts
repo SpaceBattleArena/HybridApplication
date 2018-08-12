@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Tabs, MenuController, Events } from 'ionic-angular';
 
 // Providers
 import { NewsProvider } from '../../providers/news/news';
@@ -13,9 +13,9 @@ import { Topic } from '../../data/topic';
   templateUrl: 'news.html',
 })
 export class NewsPage implements OnInit{
-  topic: Topic;
+  topic: Topic = null;
 
-  constructor(private newsProvider: NewsProvider,public navCtrl: NavController, public navParams: NavParams) {
+  constructor(private newsProvider: NewsProvider,public navCtrl: NavController, public navParams: NavParams, public tabs: Tabs, public events: Events, private menuCtrl: MenuController) {
   }
 
   ngOnInit() {
@@ -26,10 +26,25 @@ export class NewsPage implements OnInit{
         this.topic = topic;
         console.log(this.topic);
       });
+      this.tabs.setTabbarHidden(true);
+      this.events.publish('menu:hide');
+      this.menuCtrl.enable(false);
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad NewsPage');
+  }
+
+  ionViewDidEnter() {
+    this.tabs.setTabbarHidden(true);
+    this.events.publish('menu:hide');
+    this.menuCtrl.enable(false);
+  }
+
+  ionViewWillLeave() {
+    this.tabs.setTabbarHidden(false);
+    this.events.publish('menu:display');
+    this.menuCtrl.enable(true);
   }
 
 }

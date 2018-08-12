@@ -20,15 +20,15 @@ export class ShopPage implements OnInit {
   private allCards: Card[];
   public boosterCards: Card[];
   public extensions: any[] = [
-    {name: "Terra", sprite: "../assets/imgs/testBooster.png"},
-    {name: "Luna", sprite: "../assets/imgs/testBooster.png"},
-    {name: "Black Hole", sprite: "../assets/imgs/testBooster.png"},
-    {name: "Nova", sprite: "../assets/imgs/testBooster.png"},
-    {name: "Star", sprite: "../assets/imgs/testBooster.png"},
-    {name: "Glass Hole", sprite: "../assets/imgs/testBooster.png"},
-    {name: "Centorius", sprite: "../assets/imgs/testBooster.png"},
+    {name: "Terra", sprite: "assets/imgs/testBooster.png"},
+    {name: "Luna", sprite: "assets/imgs/testBooster.png"},
+    {name: "Black Hole", sprite: "assets/imgs/testBooster.png"},
+    {name: "Nova", sprite: "assets/imgs/testBooster.png"},
+    {name: "Star", sprite: "assets/imgs/testBooster.png"},
+    {name: "Glass Hole", sprite: "assets/imgs/testBooster.png"},
+    {name: "Centorius", sprite: "assets/imgs/testBooster.png"},
   ];
-  public boosterPayment: string = "../assets/imgs/testBooster.png";
+  public boosterPayment: string = "assets/imgs/testBooster.png";
   public namePayment: string = "Name";
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public tabs: Tabs, private UserProvider: UserProvider, private boosterProvider: BoosterProvider, private cardsProvider: CardsProvider) {
@@ -131,6 +131,7 @@ export class ShopPage implements OnInit {
     this.boosterProvider.buy(this.currentUser.token)
       .subscribe(
         res => {
+          console.log(res);
           this.openBooster(res);
         },
         error => {
@@ -327,7 +328,7 @@ export class ShopPage implements OnInit {
       if (value < 100) {
         value += 1;
         if (value === 50) {
-          cardsBlock.src = "http://localhost:3000/articles/sprite2.png";
+          cardsBlock.src = "http://ec2-13-59-89-177.us-east-2.compute.amazonaws.com:3000/articles/sprite2.png";
         }
         if (value >= 50) {
           cardsBlock.style.transform = 'rotateY(' + (180 - (value * 1.8)).toString() + 'deg)';
@@ -359,36 +360,56 @@ export class ShopPage implements OnInit {
     cards0Block.style.marginLeft = null;
     cards0Block.style.marginTop = null;
     cards0Block.style.width = null;
-    cards0Block.src = "http://localhost:3000/articles/back.png";
+    cards0Block.src = "assets/imgs/back.png";
 
     cards1Block.style.transform = null;
     cards1Block.style.marginLeft = null;
     cards1Block.style.marginTop = null;
     cards1Block.style.width = null;
-    cards1Block.src = "http://localhost:3000/articles/back.png";
+    cards1Block.src = "assets/imgs/back.png";
 
     cards2Block.style.transform = null;
     cards2Block.style.marginLeft = null;
     cards2Block.style.marginTop = null;
     cards2Block.style.width = null;
-    cards2Block.src = "http://localhost:3000/articles/back.png";
+    cards2Block.src = "assets/imgs/back.png";
 
     cards3Block.style.transform = null;
     cards3Block.style.marginLeft = null;
     cards3Block.style.marginTop = null;
     cards3Block.style.width = null;
-    cards3Block.src = "http://localhost:3000/articles/back.png";
+    cards3Block.src = "assets/imgs/back.png";
 
     cards4Block.style.transform = null;
     cards4Block.style.marginLeft = null;
     cards4Block.style.marginTop = null;
     cards4Block.style.width = null;
-    cards4Block.src = "http://localhost:3000/articles/back.png";
+    cards4Block.src = "assets/imgs/back.png";
 
     cards5Block.style.transform = null;
     cards5Block.style.marginLeft = null;
     cards5Block.style.marginTop = null;
     cards5Block.style.width = null;
-    cards5Block.src = "http://localhost:3000/articles/back.png";
+    cards5Block.src = "assets/imgs/back.png";
+  }
+
+  public openBuyGold() {
+    let buyGold = document.getElementById("buy_gold");
+    buyGold.classList.add("show");
+  }
+
+  public closeBuyGold() {
+    let buyGold = document.getElementById("buy_gold");
+    buyGold.classList.remove("show");
+  }
+
+  public openError() {
+    let buyGold = document.getElementById("error");
+    buyGold.classList.add("show");
+  }
+
+  public closeError() {
+    let buyGold = document.getElementById("error");
+    buyGold.classList.remove("show");
   }
 }
